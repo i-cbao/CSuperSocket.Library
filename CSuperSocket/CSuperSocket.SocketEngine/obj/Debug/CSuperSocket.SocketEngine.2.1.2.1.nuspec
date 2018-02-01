@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CSuperSocket.SocketEngine</id>
+    <version>2.1.2.1</version>
+    <title>SuperSocket.SocketEngine</title>
+    <authors>Kerry Jiang,Sarco,DynamicBlue</authors>
+    <owners>Kerry Jiang,Sarco,DynamicBlue</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CSuperSocket.SocketEngine</description>
+    <releaseNotes>IServerConfig增加PlatformType（平台配置），代码层面控制平台代码逻辑
+ if (config.PlatformType!=PlatformType.Linux)
+                {
+                      Console.WriteLine("开始进入异常片段 该句在linux下不被支持 m_ListenSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);");
+                m_ListenSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);
+                }</releaseNotes>
+    <tags>socket CSuperSocket</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="CSuperSocket.Common" version="2.1.2.1" exclude="Build,Analyzers" />
+        <dependency id="CSuperSocket.SocketBase" version="2.1.2.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Xml" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options.ConfigurationExtensions" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\bin\Debug\netstandard2.0\CSuperSocket.SocketEngine.dll" target="lib\netstandard2.0\CSuperSocket.SocketEngine.dll" />
+  </files>
+</package>

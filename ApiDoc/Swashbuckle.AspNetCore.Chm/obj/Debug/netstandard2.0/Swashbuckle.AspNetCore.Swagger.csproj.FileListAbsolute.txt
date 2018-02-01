@@ -1,0 +1,11 @@
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.deps.json
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.pdb
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.xml
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.AssemblyInfo.cs
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.xml
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.pdb
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.csprojResolveAssemblyReference.cache

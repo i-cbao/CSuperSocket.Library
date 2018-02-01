@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CSuperSocket.SocketEngine</id>
+    <version>2.0.1</version>
+    <title>SuperSocket.SocketEngine</title>
+    <authors>Kerry Jiang,Sarco,DynamicBlue</authors>
+    <owners>Kerry Jiang,Sarco,DynamicBlue</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CSuperSocket.SocketEngine</description>
+    <tags>socket supersocket</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="CSuperSocket.SocketBase" version="2.0.1" exclude="Build,Analyzers" />
+        <dependency id="CSuperSocket.Common" version="2.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="CSuperSocket.SocketBase" version="2.0.1" exclude="Build,Analyzers" />
+        <dependency id="CSuperSocket.Common" version="2.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.5.1">
+        <dependency id="CSuperSocket.SocketBase" version="2.0.1" exclude="Build,Analyzers" />
+        <dependency id="CSuperSocket.Common" version="2.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="CSuperSocket.SocketBase" version="2.0.1" exclude="Build,Analyzers" />
+        <dependency id="CSuperSocket.Common" version="2.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="CSuperSocket.SocketBase" version="2.0.1" exclude="Build,Analyzers" />
+        <dependency id="CSuperSocket.Common" version="2.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Xml" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options.ConfigurationExtensions" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.5.1, .NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.5.1, .NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.5.1, .NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Runtime.Remoting" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.5.1, .NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.5.1, .NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.5.1, .NETFramework4.5.2" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net40\CSuperSocket.SocketEngine.dll" target="lib\net40\CSuperSocket.SocketEngine.dll" />
+    <file src="D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net45\CSuperSocket.SocketEngine.dll" target="lib\net45\CSuperSocket.SocketEngine.dll" />
+    <file src="D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net451\CSuperSocket.SocketEngine.dll" target="lib\net451\CSuperSocket.SocketEngine.dll" />
+    <file src="D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net452\CSuperSocket.SocketEngine.dll" target="lib\net452\CSuperSocket.SocketEngine.dll" />
+    <file src="D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\netstandard2.0\CSuperSocket.SocketEngine.dll" target="lib\netstandard2.0\CSuperSocket.SocketEngine.dll" />
+  </files>
+</package>

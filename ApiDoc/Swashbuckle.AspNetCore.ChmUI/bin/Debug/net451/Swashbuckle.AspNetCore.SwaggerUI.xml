@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Swashbuckle.AspNetCore.SwaggerUI</name>
+    </assembly>
+    <members>
+        <member name="P:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.RoutePrefix">
+            <summary>
+            Set a custom route prefix for accessing the swagger-ui.
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.IndexStream">
+            <summary>
+            Set a Stream function to use your own version of index.html
+            </summary>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.InjectStylesheet(System.String,System.String)">
+            <summary>
+            Inject additional CSS stylesheets into the swagger-ui HTML page
+            </summary>
+            <param name="path">A path to the stylesheet - i.e. the link "href" attribute</param>
+            <param name="media">The target media - i.e. the link "media" attribute</param>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.SwaggerEndpoint(System.String,System.String)">
+            <summary>
+            Provide one or more Swagger JSON endpoints. Can be fully-qualified or relative to the UI page
+            </summary>
+            <param name="url">Can be fully qualified or relative to the current host</param>
+            <param name="description">The description that appears in the document selector drop-down</param>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.EnabledValidator(System.String)">
+            <summary>
+            You can use this parameter to set a different validator URL. See swagger-ui project for more info
+            </summary>
+            <param name="validatorUrl"></param>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.BooleanValues(System.Object[])">
+            <summary>
+            You can use this parameter to change the values in "boolean" dropdowns. See swagger-ui project for more info
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.DocumentTitle(System.String)">
+            <summary>
+            Change the title of the Swagger UI
+            </summary>
+            <param name="value">Title given to Swagger UI</param>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.DocExpansion(System.String)">
+            <summary>
+            Controls how the API listing is displayed. See swagger-ui project for more info
+            </summary>
+            <param name="value">"none", "list" (default) or "full"</param>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.SupportedSubmitMethods(System.String[])">
+            <summary>
+            An array of of the HTTP operations that will have the 'Try it out!' option. See swagger-ui project for more info
+            </summary>
+            <param name="supportedSubmitMethods"></param>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.InjectOnCompleteJavaScript(System.String)">
+            <summary>
+            Inject one or more JavaScripts to invoke when the swagger-ui has successfully loaded
+            </summary>
+            <param name="path">A path (fully qualified or relative to the current host) to the script</param>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.InjectOnFailureJavaScript(System.String)">
+            <summary>
+            Inject one or more JavaScripts to invoke if the swagger-ui fails to load
+            </summary>
+            <param name="path">A path (fully qualified or relative to the current host) to the script</param>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.ShowRequestHeaders">
+            <summary>
+            Show headers that were sent when making a request via the 'Try it out!' option. See swagger-ui project for more info
+            </summary>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.ShowJsonEditor">
+            <summary>
+            Enables a graphical view for editing complex bodies. See swagger-ui project for more info
+            </summary>
+        </member>
+        <member name="M:Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions.ConfigureOAuth2(System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+            Enable OAuth2 UI Interactions. See swagger-ui project for more info.
+            </summary>
+            <param name="clientId"></param>
+            <param name="clientSecret"></param>
+            <param name="realm"></param>
+            <param name="appName"></param>
+            <param name="scopeSeparator"></param>
+            <param name="additionalQueryStringParameters"></param>
+        </member>
+    </members>
+</doc>

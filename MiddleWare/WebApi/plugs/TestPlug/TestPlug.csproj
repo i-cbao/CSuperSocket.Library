@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>D:\WorkSpace\ICB\ICB.Library\ICB.Core.MiddleWare\bin\Debug\netcoreapp2.0\Plugins</OutputPath>
+    <DocumentationFile>D:\WorkSpace\ICB\ICB.Library\ICB.Core.MiddleWare\bin\Debug\netcoreapp2.0\doc\TestPlug.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath) D:\WorkSpace\ICB\ICB.Library\ICB.Core.MiddleWare\bin\Debug\netcoreapp2.0\Plugins\$(TargetName).dll" />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="ICB.MiddleWare.Core">
+      <HintPath>..\..\..\..\bin\ICB.MiddleWare.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\bin\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.deps.json
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\bin\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.dll
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\bin\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.pdb
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\bin\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.xml
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\obj\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\obj\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\obj\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\obj\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.AssemblyInfo.cs
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\obj\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.dll
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\obj\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.xml
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.ReDoc\obj\Debug\netstandard1.6\Swashbuckle.AspNetCore.ReDoc.pdb

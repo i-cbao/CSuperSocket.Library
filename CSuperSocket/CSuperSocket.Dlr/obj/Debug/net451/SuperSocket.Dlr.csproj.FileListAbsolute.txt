@@ -1,0 +1,15 @@
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\bin\Debug\net451\SuperSocket.Dlr.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\bin\Debug\net451\SuperSocket.Dlr.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\bin\Debug\net451\log4net.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\bin\Debug\net451\Microsoft.Scripting.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\bin\Debug\net451\SuperSocket.Common.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\bin\Debug\net451\SuperSocket.SocketBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\bin\Debug\net451\SuperSocket.SocketBase.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\bin\Debug\net451\SuperSocket.Common.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\bin\Debug\net451\Microsoft.Scripting.xml
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\obj\Debug\net451\SuperSocket.Dlr.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\obj\Debug\net451\SuperSocket.Dlr.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\obj\Debug\net451\SuperSocket.Dlr.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\obj\Debug\net451\SuperSocket.Dlr.AssemblyInfo.cs
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\obj\Debug\net451\SuperSocket.Dlr.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Dlr\obj\Debug\net451\SuperSocket.Dlr.pdb

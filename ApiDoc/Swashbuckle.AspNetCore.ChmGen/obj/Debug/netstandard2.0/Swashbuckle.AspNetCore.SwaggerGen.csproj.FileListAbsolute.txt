@@ -1,0 +1,14 @@
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.deps.json
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.pdb
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.xml
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.pdb
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\bin\Debug\netstandard2.0\Swashbuckle.AspNetCore.Swagger.xml
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.AssemblyInfo.cs
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.xml
+D:\WorkSpace\opensource\Swagger\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.pdb

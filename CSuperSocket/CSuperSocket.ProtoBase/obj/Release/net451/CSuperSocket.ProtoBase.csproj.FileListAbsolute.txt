@@ -1,0 +1,16 @@
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\bin\Release\net451\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\bin\Release\net451\CSuperSocket.ProtoBase.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.AssemblyInfo.cs
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.csprojResolveAssemblyReference.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\bin\Release\net451\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\bin\Release\net451\CSuperSocket.ProtoBase.pdb
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.csprojResolveAssemblyReference.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.csproj.CoreCompileInputs.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.AssemblyInfoInputs.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.AssemblyInfo.cs
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Release\net451\CSuperSocket.ProtoBase.pdb

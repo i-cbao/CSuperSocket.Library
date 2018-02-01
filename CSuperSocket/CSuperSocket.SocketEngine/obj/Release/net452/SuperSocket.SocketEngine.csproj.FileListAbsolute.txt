@@ -1,0 +1,13 @@
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net452\SuperSocket.SocketEngine.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net452\SuperSocket.SocketEngine.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net452\log4net.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net452\SuperSocket.Common.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net452\SuperSocket.SocketBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net452\SuperSocket.Common.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\bin\Release\net452\SuperSocket.SocketBase.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\obj\Release\net452\SuperSocket.SocketEngine.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\obj\Release\net452\SuperSocket.SocketEngine.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\obj\Release\net452\SuperSocket.SocketEngine.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\obj\Release\net452\SuperSocket.SocketEngine.AssemblyInfo.cs
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\obj\Release\net452\SuperSocket.SocketEngine.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketEngine\obj\Release\net452\SuperSocket.SocketEngine.pdb

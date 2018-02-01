@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CSuperSocket.Dlr</id>
+    <version>2.1.2</version>
+    <title>SuperSocket.Dlr</title>
+    <authors>Kerry Jiang,Sarco,DynamicBlue</authors>
+    <owners>Kerry Jiang,Sarco,DynamicBlue</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CSuperSocket.Library</description>
+    <tags>socket CSuperSocket</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="CSuperSocket.SocketBase" version="2.1.2.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.Dlr\bin\Release\netstandard2.0\CSuperSocket.Dlr.dll" target="lib\netstandard2.0\CSuperSocket.Dlr.dll" />
+  </files>
+</package>

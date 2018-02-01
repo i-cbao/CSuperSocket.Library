@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>CSuperSocket.SocketBase</PackageId>
+    <PackageTags>socket;CSuperSocket</PackageTags>
+    <Title>SuperSocket.SocketEngine</Title>
+    <Description>CSuperSocket.SocketEngine</Description>
+    <Authors>Kerry Jiang;Sarco;DynamicBlue</Authors>
+    <!--<TargetFrameworks>netstandard2.0;net40;net45;net451;net452</TargetFrameworks>-->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.1.2.1</Version>
+    <Product>CSuperSocket.SocketBase</Product>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Kerry Jiang;Sarco;DynamicBlue</Company>
+    <AssemblyVersion>2.1.2.1</AssemblyVersion>
+    <FileVersion>2.1.2.1</FileVersion>
+    <PackageReleaseNotes>IServerConfig增加PlatformType（平台配置），代码层面控制平台代码逻辑</PackageReleaseNotes>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;LINUX;NETSTANDARD2_0;NETSTANDARD2_0;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD2_0;LINUX</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net45' OR '$(TargetFramework)' == 'net451' OR '$(TargetFramework)' == 'net452'">
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSuperSocket.Common\CSuperSocket.Common.csproj" />
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath) $(SolutionDir)bin\$(TargetName).dll" />
+  </Target>
+</Project>

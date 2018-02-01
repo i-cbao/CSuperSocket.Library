@@ -1,0 +1,9 @@
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\bin\Release\netstandard2.0\SuperSocket.Common.deps.json
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\bin\Release\netstandard2.0\SuperSocket.Common.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\bin\Release\netstandard2.0\SuperSocket.Common.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\netstandard2.0\SuperSocket.Common.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\netstandard2.0\SuperSocket.Common.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\netstandard2.0\SuperSocket.Common.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\netstandard2.0\SuperSocket.Common.AssemblyInfo.cs
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\netstandard2.0\SuperSocket.Common.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\netstandard2.0\SuperSocket.Common.pdb

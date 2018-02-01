@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Swashbuckle.AspNetCore.SwaggerUI3</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.InjectStylesheet(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,System.String,System.String)">
+            <summary>
+            Injects additional CSS stylesheets into the index.html page
+            </summary>
+            <param name="options"></param>
+            <param name="path">A path to the stylesheet - i.e. the link "href" attribute</param>
+            <param name="media">The target media - i.e. the link "media" attribute</param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.SwaggerEndpoint(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,System.String,System.String)">
+            <summary>
+            Adds Swagger JSON endpoints. Can be fully-qualified or relative to the UI page
+            </summary>
+            <param name="options"></param>
+            <param name="url">Can be fully qualified or relative to the current host</param>
+            <param name="name">The description that appears in the document selector drop-down</param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.EnableDeepLinking(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions)">
+            <summary>
+            Enables deep linking for tags and operations
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.DisplayOperationId(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions)">
+            <summary>
+            Controls the display of operationId in operations list
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.DefaultModelsExpandDepth(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,System.Int32)">
+            <summary>
+            The default expansion depth for models (set to -1 completely hide the models)
+            </summary>
+            <param name="options"></param>
+            <param name="depth"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.DefaultModelExpandDepth(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,System.Int32)">
+            <summary>
+            The default expansion depth for the model on the model-example section
+            </summary>
+            <param name="options"></param>
+            <param name="depth"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.DefaultModelRendering(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,Microsoft.AspNetCore.Builder.ModelRendering)">
+            <summary>
+            Controls how the model is shown when the API is first rendered.
+            (The user can always switch the rendering for a given model by clicking the 'Model' and 'Example Value' links.)
+            </summary>
+            <param name="options"></param>
+            <param name="modelRendering"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.DisplayRequestDuration(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions)">
+            <summary>
+            Controls the display of the request duration (in milliseconds) for Try-It-Out requests
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,Microsoft.AspNetCore.Builder.DocExpansion)">
+            <summary>
+            Controls the default expansion setting for the operations and tags.
+            It can be 'List' (expands only the tags), 'Full' (expands the tags and operations) or 'None' (expands nothing)
+            </summary>
+            <param name="options"></param>
+            <param name="docExpansion"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.EnableFilter(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,System.String)">
+            <summary>
+            Enables filtering. The top bar will show an edit box that you can use to filter the tagged operations that are shown.
+            If an expression is provided it will be used and applied initially.
+            Filtering is case sensitive matching the filter expression anywhere inside the tag
+            </summary>
+            <param name="options"></param>
+            <param name="expression"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.MaxDisplayedTags(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,System.Int32)">
+            <summary>
+            Limits the number of tagged operations displayed to at most this many. The default is to show all operations
+            </summary>
+            <param name="options"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.ShowExtensions(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions)">
+            <summary>
+            Controls the display of vendor extension (x-) fields and values for Operations, Parameters, and Schema
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.OAuth2RedirectUrl(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,System.String)">
+            <summary>
+            OAuth redirect URL
+            </summary>
+            <param name="options"></param>
+            <param name="url"></param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.SwaggerUIOptionsExtensions.ValidatorUrl(Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions,System.String)">
+            <summary>
+            By default, Swagger-UI attempts to validate specs against swagger.io's online validator.
+            You can use this parameter to set a different validator URL, for example for locally deployed validators (Validator Badge).
+            Setting it to null will disable validation 
+            </summary>
+            <param name="options"></param>
+            <param name="url"></param>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions.RoutePrefix">
+            <summary>
+            Gets or sets a route prefix for accessing the swagger-ui
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions.IndexStream">
+            <summary>
+            Gets or sets a Stream function for retrieving the swagger-ui page
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions.DocumentTitle">
+            <summary>
+            Gets or sets a title for the swagger-ui page
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions.HeadContent">
+            <summary>
+            Gets or sets additional content to place in the head of the swagger-ui page
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.SwaggerUI3.SwaggerUIOptions.ConfigObject">
+            <summary>
+            Gets the JavaScript config object, represented as JSON, that will be passed to the SwaggerUI
+            </summary>
+        </member>
+    </members>
+</doc>

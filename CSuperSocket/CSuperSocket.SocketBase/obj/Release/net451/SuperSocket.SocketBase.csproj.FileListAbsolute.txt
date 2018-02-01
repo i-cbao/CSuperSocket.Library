@@ -1,0 +1,11 @@
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\bin\Release\net451\SuperSocket.SocketBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\bin\Release\net451\SuperSocket.SocketBase.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\bin\Release\net451\log4net.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\bin\Release\net451\SuperSocket.Common.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\bin\Release\net451\SuperSocket.Common.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\obj\Release\net451\SuperSocket.SocketBase.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\obj\Release\net451\SuperSocket.SocketBase.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\obj\Release\net451\SuperSocket.SocketBase.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\obj\Release\net451\SuperSocket.SocketBase.AssemblyInfo.cs
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\obj\Release\net451\SuperSocket.SocketBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.SocketBase\obj\Release\net451\SuperSocket.SocketBase.pdb

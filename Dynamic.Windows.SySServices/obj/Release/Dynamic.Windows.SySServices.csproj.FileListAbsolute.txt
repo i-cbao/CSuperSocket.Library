@@ -1,0 +1,11 @@
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\obj\Release\Dynamic.Windows.SySServices.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\obj\Release\Dynamic.Windows.SySServices.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\bin\Release\Dynamic.Windows.SySServices.exe.config
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\bin\Release\Dynamic.Windows.SySServices.exe
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\bin\Release\Dynamic.Windows.SySServices.pdb
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\bin\Release\Newtonsoft.Json.dll
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\obj\Release\Dynamic.Windows.SySServices.exe
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\obj\Release\Dynamic.Windows.SySServices.pdb
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\bin\Release\serviceProxy.exe
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\bin\Release\SysServicesInstallCfg.json
+D:\WorkSpace\opensource\DynamicBlue.Library\Dynamic.Windows.SySServices\bin\Release\使用方法.txt

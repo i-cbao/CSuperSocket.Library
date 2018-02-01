@@ -1,0 +1,8 @@
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\bin\Release\net45\SuperSocket.ProtoBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\bin\Release\net45\SuperSocket.ProtoBase.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net45\SuperSocket.ProtoBase.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net45\SuperSocket.ProtoBase.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net45\SuperSocket.ProtoBase.AssemblyInfo.cs
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net45\SuperSocket.ProtoBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net45\SuperSocket.ProtoBase.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Release\net45\SuperSocket.ProtoBase.csprojResolveAssemblyReference.cache

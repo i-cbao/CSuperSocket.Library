@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Swashbuckle.AspNetCore.ReDoc</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.AspNetCore.Builder.ReDocOptionsExtensions.InjectStylesheet(Swashbuckle.AspNetCore.ReDoc.ReDocOptions,System.String,System.String)">
+            <summary>
+            Injects additional CSS stylesheets into the index.html page
+            </summary>
+            <param name="options"></param>
+            <param name="path">A path to the stylesheet - i.e. the link "href" attribute</param>
+            <param name="media">The target media - i.e. the link "media" attribute</param>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.ReDoc.ReDocOptions.RoutePrefix">
+            <summary>
+            Gets or sets a route prefix for accessing the redoc page
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.ReDoc.ReDocOptions.IndexStream">
+            <summary>
+            Gets or sets a Stream function for retrieving the redoc page
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.ReDoc.ReDocOptions.DocumentTitle">
+            <summary>
+            Gets or sets a title for the redoc page
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.ReDoc.ReDocOptions.HeadContent">
+            <summary>
+            Gets or sets additional content to place in the head of the redoc page
+            </summary>
+        </member>
+        <member name="P:Swashbuckle.AspNetCore.ReDoc.ReDocOptions.SpecUrl">
+            <summary>
+            Gets or sets the Chm JSON endpoint. Can be fully-qualified or relative to the redoc page
+            </summary>
+        </member>
+    </members>
+</doc>

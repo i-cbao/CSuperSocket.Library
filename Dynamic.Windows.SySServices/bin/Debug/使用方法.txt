@@ -1,0 +1,15 @@
+1.将解压后的服务dll exe json 文件放到需要生成windows服务的同级目录下
+2.根据不通情况配置SysServicesInstallCfg.json文件
+ ExeFileName=表示当前目录下需要变成windows服务的exe
+ ServiceName=表示服务唯一表示，这个最好用小写加下划线构成(不满足的程序会做简单处理但不完全，建议按规范执行)
+ DisplayName=表示服务友好名称，方便后期查看
+ Description=表示服务描述字段的说明
+ 下面是格式：
+ {
+  "ExeFileName": "NWorkflow.Console.exe",
+  "ServiceName": "NWF流程服务",
+  "DisplayName": "显示名字",
+  "Description": "NWF流程服务",
+  "AccountName": "LocalSystem"
+}
+3.按控制台的操作说明进行操作

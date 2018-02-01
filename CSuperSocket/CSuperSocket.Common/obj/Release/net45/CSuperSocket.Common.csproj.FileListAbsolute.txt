@@ -1,0 +1,16 @@
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\bin\Release\net45\CSuperSocket.Common.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\bin\Release\net45\CSuperSocket.Common.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.AssemblyInfo.cs
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.csprojResolveAssemblyReference.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.Common\bin\Release\net45\CSuperSocket.Common.dll
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.Common\bin\Release\net45\CSuperSocket.Common.pdb
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.csprojResolveAssemblyReference.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.csproj.CoreCompileInputs.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.AssemblyInfoInputs.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.AssemblyInfo.cs
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.dll
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.Common\obj\Release\net45\CSuperSocket.Common.pdb

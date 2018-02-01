@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>CSuperSocket.ProtoBase</PackageId>
+    <PackageTags>socket;CSuperSocket</PackageTags>
+    <Title>SuperSocket.ProtoBase</Title>
+    <Description>CSuperSocket.ProtoBase</Description>
+    <Authors>Kerry Jiang;Sarco;DynamicBlue</Authors>
+    <!--<TargetFrameworks>netstandard2.0;net40;net45;net451;net452</TargetFrameworks>-->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.1.2.1</Version>
+    <Product>CSuperSocket.ProtoBase</Product>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Kerry Jiang;Sarco;DynamicBlue</Company>
+    <AssemblyVersion>2.1.2.1</AssemblyVersion>
+    <FileVersion>2.1.2.1</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD2_0;LINUX</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;LINUX;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath) $(SolutionDir)bin\$(TargetName).dll" />
+  </Target>
+
+</Project>

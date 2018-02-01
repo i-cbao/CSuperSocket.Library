@@ -1,0 +1,2286 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ICheBao.Utility</name>
+    </assembly>
+    <members>
+        <member name="T:ICheBao.Utility.Config.ConfigBase">
+            <summary>
+            配置文件基类
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Config.ConfigManager">
+            <summary>
+            配置文件管理
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Config.ConfigManager.ConfigChange">
+            <summary> 配置文件改变委托 </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="T:ICheBao.Utility.Config.FileNameAttribute">
+            <summary>
+            配置文件名属性
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.DResult">
+            <summary>
+            基础数据结果类
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.DResult.Status">
+            <summary>
+            处理结果
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.DResult.Message">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.DResult.#ctor(System.Boolean,System.String)">
+            <summary>
+            返回消息
+            </summary>
+            <param name="status">状态</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.EnumExtension">
+            <summary>
+            枚举扩展类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.EnumExtension.GetValue``1(``0)">
+            <summary>
+            获取枚举值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.EnumExtension.GetText``1(``0)">
+            <summary>
+            获取枚举 Description描述
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.EnumExtension.GetEnumText``2(``1)">
+            <summary>
+            获取枚举 Description描述
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TV"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.EnumExtension.ToEnum``2(``1)">
+            <summary>
+            转换为枚举类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TV"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.EnumExtension.ToEnum``1(System.Int32)">
+            <summary>
+            转换为枚举类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.EnumExtension.EnumToList``1">
+            <summary>
+            将枚举转成List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.EnumExtension.EnumberEntity">
+            <summary>
+            枚举类型扩展实体
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Extend.EnumExtension.EnumberEntity.Desction">
+            <summary>
+            枚举的描述
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Extend.EnumExtension.EnumberEntity.EnumName">
+            <summary>
+            枚举名称
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Extend.EnumExtension.EnumberEntity.EnumValue">
+            <summary>
+            枚举对象的值
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.EnumExtension.EnumberEntity.ToString">
+            <summary>
+            输出枚举描述
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.ExportAttribute">
+            <summary>
+            导出设置属性
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Extend.ExportAttribute.Hidden">
+            <summary>
+            隐藏列
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Extend.ExportAttribute.Name">
+            <summary>
+            字段名字
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.ExpressionExtension">
+            <summary>
+            Linq表达式扩展类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ExpressionExtension.Compose``1(System.Linq.Expressions.Expression{``0},System.Linq.Expressions.Expression{``0},System.Func{System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression})">
+            <summary>
+            以特定的条件运行组合两个Expression表达式
+            </summary>
+            <typeparam name="T">表达式的主实体类型</typeparam>
+            <param name="first">第一个Expression表达式</param>
+            <param name="second">要组合的Expression表达式</param>
+            <param name="merge">组合条件运算方式</param>
+            <returns>组合后的表达式</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ExpressionExtension.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            以 Expression.AndAlso 组合两个Expression表达式
+            </summary>
+            <typeparam name="T">表达式的主实体类型</typeparam>
+            <param name="first">第一个Expression表达式</param>
+            <param name="second">要组合的Expression表达式</param>
+            <returns>组合后的表达式</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ExpressionExtension.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            以 Expression.OrElse 组合两个Expression表达式
+            </summary>
+            <typeparam name="T">表达式的主实体类型</typeparam>
+            <param name="first">第一个Expression表达式</param>
+            <param name="second">要组合的Expression表达式</param>
+            <returns>组合后的表达式</returns>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.IExtension`1">
+            <summary>
+             接口扩展类
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.IExtension`1.GetValue">
+            <summary>
+             获取值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.ExtensionGroup">
+            <summary>
+             字符扩展组
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ExtensionGroup.As``1(System.String)">
+            <summary>
+            扩展转换
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ExtensionGroup.As``2(``1)">
+            <summary>
+            扩展转换
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TV"></typeparam>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.ListExtension">
+            <summary>
+            集合扩展类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.IsNullOrEmpty``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            判断集合是否为空
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.Foreach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            遍历
+            </summary>
+            <param name="instance"></param>
+            <param name="action"></param>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.ArrayEquals``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Boolean)">
+            <summary>
+            判断集合是否相等
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source">源</param>
+            <param name="target">目标</param>
+            <param name="allowRepeat">是否允许重复</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            过滤重复
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TV"></typeparam>
+            <param name="source"></param>
+            <param name="keySelector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.In``1(``0,``0[])">
+            <summary>
+            判断单个对象是否存在于集合中
+            </summary>
+            <param name="t"></param>
+            <param name="c"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.RandomSort``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary> 随机排序 </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.Join(System.Collections.IEnumerable,System.String,System.String)">
+            <summary>
+            使用分隔符、以及模板拼接字符串
+            </summary>
+            <param name="source"></param>
+            <param name="separator">分隔符</param>
+            <param name="template">字符串格式化模板</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.Join(System.Collections.IEnumerable)">
+            <summary>
+            以“,”拼接字符串
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.Join(System.Collections.IEnumerable,System.String)">
+            <summary>
+            使用分隔符拼接字符串
+            </summary>
+            <param name="source"></param>
+            <param name="separator">分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ListExtension.SortByDependencies``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``0}})">
+            <summary> 根据依赖项排序 </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="getDependencies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.LSExport.CreatExcleDataTitle``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String})">
+            <summary>
+            创建Excel数据标题
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.LSExport.CreatExcleDataTitle``1(System.Collections.Generic.List{``0},System.String@,System.Collections.Generic.List{System.String})">
+            <summary>
+            创建Excel数据标题
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.LSExport.GetClassFields``1(System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            获取数据库字段
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="isTable">是否以表方式返回字段（提示EF不支持）</param>
+            <param name="dynamicHidden">不查询的数据字段</param>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.LSExportAttribute">
+            <summary>
+            导出设置属性
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Extend.LSExportAttribute.Hidden">
+            <summary>
+            隐藏列
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Extend.LSExportAttribute.Name">
+            <summary>
+            字段名字
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.ObjectExtension">
+            <summary>
+            对象扩展类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ObjectExtension.CastTo``1(System.Object)">
+            <summary>
+            对象转换为泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">当前对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ObjectExtension.CastTo``1(System.Object,``0)">
+            <summary>
+            对象转换为泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="def">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ObjectExtension.CastTo(System.Object,System.Type)">
+            <summary>
+            对象转换为泛型
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ObjectExtension.ToDynamic(System.Object)">
+            <summary>
+            将对象（主要是匿名对象）转换为dynamic
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.ObjectExtension.Format(System.Exception,System.Boolean)">
+            <summary>
+            异常信息格式化
+            </summary>
+            <param name="ex"></param>
+            <param name="isHideStackTrace"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.StringExtension">
+            <summary>
+            字符串扩展类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.IsNullOrEmpty(System.String)">
+            <summary>
+            判断字符串是否为空
+            </summary>
+            <param name="str">当前字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.IsNotNullOrEmpty(System.String)">
+            <summary>
+            判断字符串是否非空
+            </summary>
+            <param name="str">当前字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.FormatWith(System.String,System.Object)">
+            <summary>
+            字符串格式化
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="arg0">参数0</param>
+            <returns>格式化后的字符串</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.FormatWith(System.String,System.Object,System.Object)">
+            <summary>
+            字符串格式化
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="arg0">参数0</param>
+            <param name="arg1">参数1</param>
+            <returns>格式化后的字符串</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.FormatWith(System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            字符串格式化
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="arg0">参数0</param>
+            <param name="arg1">参数1</param>
+            <param name="arg2">参数2</param>
+            <returns>格式化后的字符串</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.FormatWith(System.String,System.Object[])">
+            <summary>
+            字符串格式化
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="args">参数集</param>
+            <returns>格式化后的字符串</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.Reverse(System.String)">
+            <summary>
+            倒置字符串
+            输入“ABC”，输出“CBA”
+            </summary>
+            <param name="str">当前字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.Sub(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            截断字符扩展
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="start">起始位置</param>
+            <param name="len">截取长度</param>
+            <param name="v">省略符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.Sub(System.String,System.Int32,System.String)">
+            <summary>
+            截断字符扩展
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="len">截取长度（从0开始）</param>
+            <param name="v">省略符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.Sub(System.String,System.Int32)">
+            <summary>
+            截断字符扩展
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="len">截取长度（从0开始）</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.HtmlEncode(System.String)">
+            <summary>
+            Html编码
+            </summary>
+            <param name="str">当前字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.HtmlDecode(System.String)">
+            <summary>
+            Html解码
+            </summary>
+            <param name="str">当前字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.UrlEncode(System.String,System.Text.Encoding)">
+            <summary>
+            Url编码
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="encoding">编码格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.UrlEncode(System.String)">
+            <summary>
+            Url编码
+            </summary>
+            <param name="str">当前字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.UrlDecode(System.String,System.Text.Encoding)">
+            <summary>
+            Url解码
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="encoding">编码格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.UrlDecode(System.String)">
+            <summary>
+            Url解码
+            </summary>
+            <param name="str">当前字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.Query``1(System.String,``0)">
+            <summary>
+            获取该字符串的QueryString值
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+            <param name="str">当前字符串</param>
+            <param name="def">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.Form``1(System.String,``0)">
+            <summary>
+            获取该字符串的Form值
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+            <param name="str">当前字符串</param>
+            <param name="def">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.QueryOrForm``1(System.String,``0)">
+            <summary>
+            获取该字符串QueryString或Form值
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+            <param name="str">当前字符串</param>
+            <param name="def">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.ToCamelCase(System.String)">
+            <summary>
+            转换为驼峰命名格式
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.StringExtension.ToUrlCase(System.String)">
+            <summary>
+            转换为url命名格式
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Extend.TypeExtension">
+            <summary>
+            类型<see cref="T:System.Type"/>扩展类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.TypeExtension.IsNullableType(System.Type)">
+            <summary>
+            判断类型是否为Nullable类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.TypeExtension.GetUnNullableType(System.Type)">
+            <summary>
+            获取Nullable类型的基础类型
+            </summary>
+            <param name="type"></param>
+            <returns> </returns>
+        </member>
+        <member name="M:ICheBao.Utility.Extend.TypeExtension.GetAttribute``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            从类型成员获取指定Attribute特性
+            </summary>
+            <typeparam name="T">Attribute特性类型</typeparam>
+            <param name="memberInfo">类型类型成员</param>
+            <param name="inherit">是否从继承中查找</param>
+            <returns>存在返回第一个，不存在返回null</returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.CacheHelper">
+            <summary>
+            全局缓存
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Helper.CacheHelper.UserCache">
+            <summary>
+            登录用户信息缓存
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.ConfigHelper">
+            <summary>
+            配置文件帮助类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ConfigHelper.GetConfigString(System.String)">
+            <summary>
+            得到AppSettings中的配置字符串信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ConfigHelper.GetAppSetting``1(System.Func{System.String,``0},``0,System.String,System.String)">
+            <summary> 配置文件读取 </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parseFunc">类型转换方法</param>
+            <param name="defaultValue">默认值</param>
+            <param name="key">配置名</param>
+            <param name="supressKey">配置别名</param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.CookieHelper">
+            <summary>
+            Cookie帮助类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.CookieHelper.Set(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            写cookie
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="expires">过期时间/秒</param>
+            <param name="domain"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.CookieHelper.Delete(System.String,System.String)">
+            <summary>
+            删除Cookie
+            </summary>
+            <param name="name"></param>
+            <param name="domain"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.CookieHelper.GetValue(System.String)">
+            <summary>
+            获取Cookie值
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.ExcelHelper">
+            <summary>
+            Excel帮助类
+            基于 org.in2bits.MyXls 0.6.0
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelHelper.Export(System.Data.DataSet,System.String,System.String)">
+            <summary>
+            导出Excel - 支持多Sheet
+            DataTable = Sheet
+            DataTable.TableName = Sheet.Name
+            </summary>
+            <param name="ds"></param>
+            <param name="fileName">文件名.xls</param>
+            <param name="savePath">保存路径，为空则使用流的方式下载</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelHelper.Read(org.in2bits.MyXls.XlsDocument)">
+            <summary>
+            解析Excel - 仅支持Excel2003.xls格式
+            </summary>
+            <param name="xls"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ExportDt(System.Data.DataTable)">
+            <summary>
+            DataTable导出到Excel的MemoryStream
+            </summary>
+            <param name="dtSource">源DataTable</param>
+            <param name="strHeaderText">表头文本</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ExportDtNew(NPOI.SS.UserModel.IWorkbook,System.String,System.Data.DataTable)">
+            <summary>
+            DataTable导出到Excel的MemoryStream
+            </summary>
+            <param name="dtSource">源DataTable</param>
+            <param name="strHeaderText">表头文本</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ExportDTtoExcel(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            DataTable导出到Excel文件
+            </summary>
+            <param name="dtSource">源DataTable</param>
+            <param name="strHeaderText">表头文本</param>
+            <param name="strFileName">保存位置</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ImportExcel2003ToDt(System.String)">
+            <summary>读取excel
+            默认第一行为标头,实际数据从第二行读取
+            </summary>
+            <param name="strFileName">excel文档路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ImportExcel2007ToDt(System.String)">
+            <summary>读取excel
+            默认第一行为标头,实际数据从第二行读取
+            </summary>
+            <param name="strFileName">excel文档路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ImportExcel2003ToDt(System.String,System.String,System.Int32)">
+            <summary>
+            读取excel
+            </summary>
+            <param name="strFileName">excel文件路径</param>
+            <param name="sheetName">需要导出的sheet</param>
+            <param name="headerRowIndex">列头所在行号，-1表示没有列头</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ImportExcel2007ToDt(System.String,System.String,System.Int32)">
+            <summary>
+            读取excel
+            </summary>
+            <param name="strFileName">excel文件路径</param>
+            <param name="sheetName">需要导出的sheet</param>
+            <param name="headerRowIndex">列头所在行号，-1表示没有列头</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ImportExcel2003ToDt(System.String,System.Int32,System.Int32)">
+            <summary>
+            读取excel
+            </summary>
+            <param name="strFileName">excel文件路径</param>
+            <param name="sheetIndex">需要导出的sheet序号</param>
+            <param name="headerRowIndex">列头所在行号，-1表示没有列头</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ImportExcel2007ToDt(System.String,System.Int32,System.Int32)">
+            <summary>
+            读取excel
+            </summary>
+            <param name="strFileName">excel文件路径</param>
+            <param name="sheetIndex">需要导出的sheet序号</param>
+            <param name="headerRowIndex">列头所在行号，-1表示没有列头</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ImportExcel2003ToDt(System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            读取excel
+            </summary>
+            <param name="strFileName">excel文件路径</param>
+            <param name="sheetName">需要导出的sheet</param>
+            <param name="headerRowIndex">列头所在行号，-1表示没有列头</param>
+            <param name="needHeader">是否需要头</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ImportExcel2003ToDt(System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            读取excel
+            </summary>
+            <param name="strFileName">excel文件路径</param>
+            <param name="sheetIndex">需要导出的sheet序号</param>
+            <param name="headerRowIndex">列头所在行号，-1表示没有列头</param>
+            <param name="needHeader">是否需要头</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ImportExcel2007InDt(NPOI.SS.UserModel.ISheet,System.Int32,System.Boolean)">
+            <summary>
+            将制定sheet中的数据导出到datatable中
+            </summary>
+            <param name="sheet">需要导出的sheet</param>
+            <param name="headerRowIndex">列头所在行号，-1表示没有列头</param>
+            <param name="needHeader">是否需要列头</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.UpdateExcel(System.String,System.String,System.String[],System.Int32,System.Int32)">
+            <summary>
+            更新Excel表格
+            </summary>
+            <param name="outputFile">需更新的excel表格路径</param>
+            <param name="sheetname">sheet名</param>
+            <param name="updateData">需更新的数据</param>
+            <param name="coluid">需更新的列号</param>
+            <param name="rowid">需更新的开始行号</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.UpdateExcel(System.String,System.String,System.String[][],System.Int32[],System.Int32)">
+            <summary>
+            更新Excel表格
+            </summary>
+            <param name="outputFile">需更新的excel表格路径</param>
+            <param name="sheetname">sheet名</param>
+            <param name="updateData">需更新的数据</param>
+            <param name="coluids">需更新的列号</param>
+            <param name="rowid">需更新的开始行号</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.UpdateExcel(System.String,System.String,System.Double[],System.Int32,System.Int32)">
+            <summary>
+            更新Excel表格
+            </summary>
+            <param name="outputFile">需更新的excel表格路径</param>
+            <param name="sheetname">sheet名</param>
+            <param name="updateData">需更新的数据</param>
+            <param name="coluid">需更新的列号</param>
+            <param name="rowid">需更新的开始行号</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.UpdateExcel(System.String,System.String,System.Double[][],System.Int32[],System.Int32)">
+            <summary>
+            更新Excel表格
+            </summary>
+            <param name="outputFile">需更新的excel表格路径</param>
+            <param name="sheetname">sheet名</param>
+            <param name="updateData">需更新的数据</param>
+            <param name="coluids">需更新的列号</param>
+            <param name="rowid">需更新的开始行号</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.GetSheetNumber(System.String)">
+            <summary>
+            读取Excel文件,获取有多少个Sheet数
+            </summary>
+            <param name="filePath">文件地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.GetSheetName(System.String)">
+            <summary>
+            获取Excel文件中,Sheet表单的名字列表
+            </summary>
+            <param name="filePath">文件地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.IsNumeric(System.String,System.Double@)">
+            <summary>
+            是否是数字
+            </summary>
+            <param name="message"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.ExcelToTableForXLSX(System.String)">
+            <summary>
+            将Excel文件中的数据读出到DataTable中(xlsx)
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.TableToExcelForXLSX(System.Data.DataTable,System.String)">
+            <summary>
+            将DataTable数据导出到Excel文件中(xlsx)
+            </summary>
+            <param name="dt"></param>
+            <param name="file"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.GetValueTypeForXLSX(NPOI.XSSF.UserModel.XSSFCell)">
+            <summary>
+            获取单元格类型(xlsx)
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.CreatExcleDataTitle``1(System.Collections.Generic.List{``0})">
+            <summary>
+            创建Excel数据标题
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.ExcelNpoiHelper.CreatExcleDataTitle``1(System.Collections.Generic.List{``0},System.String@)">
+            <summary>
+            创建Excel数据标题
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.FileHelper">
+            <summary>
+            文件上传帮助类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.FileHelper.SaveAs(System.Web.HttpPostedFile,System.String,System.String)">
+            <summary>
+            文件另存为
+            </summary>
+            <param name="file"></param>
+            <param name="path"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.FileHelper.SaveAs(System.IO.Stream,System.String,System.String)">
+            <summary>
+            图片另存为
+            </summary>
+            <param name="sm">图片流</param>
+            <param name="path"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.FileHelper.Delete(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.FileHelper.CopyTo(ICheBao.Utility.Helper.FileCopyDto,System.Action{System.String})">
+            <summary>
+            拷贝文件
+            </summary>
+            <param name="dto"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.FileHelper.FileNameFilter(System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            文件名过滤
+            </summary>
+            <param name="filters">通配符集</param>
+            <param name="name">文件名</param>
+            <param name="ext">后缀名</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.FileHelper.DirectorieNameFilter(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            文件夹过滤
+            </summary>
+            <param name="filters">通配符集</param>
+            <param name="name">文件夹名</param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.FileCopyDto">
+            <summary>
+            拷贝目录文件参数
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Helper.FileCopyDto.Path">
+            <summary> 递归目录 </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Helper.FileCopyDto.SourcePath">
+            <summary> 原始目录 </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Helper.FileCopyDto.TargetPath">
+            <summary> 目标目录 </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Helper.FileCopyDto.TimeFilter">
+            <summary> 时间过滤 </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Helper.FileCopyDto.FileFilter">
+            <summary>
+            文件名过滤
+            null - 禁用、true - 使用、false - 排除
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Helper.FileCopyDto.FileFilters">
+            <summary> 文件名过滤通配符集 </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Helper.FileCopyDto.DirectorieFilter">
+            <summary> 
+            文件夹过滤
+            null - 禁用、true - 使用、false - 排除
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Helper.FileCopyDto.DirectorieFilters">
+            <summary> 文件夹过滤通配符集 </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.FileAndPathDto">
+            <summary>
+            需要Copy的文件缓存列表
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.#ctor(System.String)">
+            <summary>
+            HttpHelper构造函数
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.#ctor(System.String,System.Text.Encoding)">
+            <summary>
+            HttpHelper构造函数
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.#ctor(System.String,System.String,System.Text.Encoding,System.String)">
+            <summary>
+            HttpHelper构造函数
+            </summary>
+            <param name="url"></param>
+            <param name="method"></param>
+            <param name="encoding"></param>
+            <param name="paras"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.#ctor(System.String,System.String,System.Text.Encoding,System.String,System.String,System.String)">
+            <summary>
+            HttpHelper构造函数
+            </summary>
+            <param name="url">url地址</param>
+            <param name="method">请求方法</param>
+            <param name="encoding">请求编码</param>
+            <param name="cookie">请求Cookie</param>
+            <param name="referer">"base"为当前url域名</param>
+            <param name="paras"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.CreateHttpRequest">
+            <summary>
+            创建httpwebrequest 实例
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.WriteParams(System.String)">
+            <summary>
+            写post参数
+            </summary>
+            <param name="paras"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.WriteFileStream(System.String,System.IO.Stream)">
+            <summary>
+            写文件
+            </summary>
+            <param name="name"></param>
+            <param name="file"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.SetHttpInfo(System.String,System.String,System.String)">
+            <summary>
+            设置参数
+            </summary>
+            <param name="url"></param>
+            <param name="cookie"></param>
+            <param name="referer"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.SetUrl(System.String)">
+            <summary>
+            设置url
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.SetContentType(System.String)">
+            <summary>
+            设置内容类型
+            </summary>
+            <param name="contentType"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.AddFiles(System.Collections.Generic.Dictionary{System.String,System.IO.Stream})">
+            <summary>
+            添加文件
+            </summary>
+            <param name="fileList"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.AddFiles(System.Collections.Generic.List{System.String})">
+            <summary>
+            添加文件
+            </summary>
+            <param name="pathList"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.GetRequestUrl">
+            <summary>
+            获取请求的url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.SetWebProxy(System.String,System.String,System.String)">
+            <summary>
+            设置有帐号的代理
+            </summary>
+            <param name="userName"></param>
+            <param name="userPwd"></param>
+            <param name="ip"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.SetWebProxy(System.String,System.Int32)">
+            <summary>
+            设置免费代理
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.GetStream">
+            <summary>
+            获取返回流
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.GetCookie">
+            <summary>
+            获取cookie
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.GetHtml">
+            <summary>
+            获取html代码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.HttpHelper.SaveFile(System.String)">
+            <summary>
+            保存文件
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.IdCardHelp">
+            <summary>
+            身份证底帮助
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.IdCardHelp.GetBirthdayByIdentityCardId(System.String,System.Boolean)">
+            <summary>
+            根据身份证获取生日
+            </summary>
+            <param name="cardid">身份证</param>
+            <param name="res">是否有格式(true1990-01-01,false19900101)</param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.IdHelper">
+            <summary>
+            ID生成工具
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.IdHelper.GetGuid">
+            <summary>
+            生成标准GUID（例如：e85f942e-156d-47bc-a6c8-123a727a3a3a）
+            </summary>
+            <returns>Guid</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.IdHelper.GetGuid32">
+            <summary>
+            生成32位GUID（例如：e85f942e156d47bca6c8123a727a3a3a）
+            </summary>
+            <returns>Guid</returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.NamingType">
+            <summary> 命名格式 </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Helper.NamingType.Normal">
+            <summary> 默认 </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Helper.NamingType.CamelCase">
+            <summary> 驼峰 </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Helper.NamingType.UrlCase">
+            <summary> Url格式 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.JsonContractResolver.#ctor(ICheBao.Utility.Helper.NamingType,System.Boolean,System.String[])">
+            <summary> 构造函数 </summary>
+            <param name="camelCase">驼峰</param>
+            <param name="retain">保留/排除：true为保留</param>
+            <param name="props"></param>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.JsonHelper">
+            <summary>
+            Json帮助类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.JsonHelper.ToJson``1(``0,ICheBao.Utility.Helper.NamingType,System.Boolean)">
+            <summary> 序列化为json格式 </summary>
+            <typeparam name="T"></typeparam>
+            <param name="jsonObj"></param>
+            <param name="namingType">命名规则</param>
+            <param name="indented">是否缩进</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.JsonHelper.ToJson``1(``0,ICheBao.Utility.Helper.NamingType,System.Boolean,System.Boolean,System.String[])">
+            <summary> 序列化为json格式 </summary>
+            <typeparam name="T"></typeparam>
+            <param name="jsonObj"></param>
+            <param name="namingType">命名规则</param>
+            <param name="indented">是否缩进</param>
+            <param name="retain">保留/排除</param>
+            <param name="props">属性选择</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.JsonHelper.Json``1(System.String,ICheBao.Utility.Helper.NamingType)">
+            <summary> 将json反序列化为对象 </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <param name="namingType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.JsonHelper.JsonList``1(System.String,ICheBao.Utility.Helper.NamingType)">
+            <summary> 反序列化json为列表 </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <param name="namingType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.JsonHelper.Json``1(System.String,``0,ICheBao.Utility.Helper.NamingType)">
+            <summary> 反序列化到匿名对象 </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <param name="anonymousTypeObject"></param>
+            <param name="namingType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.RandomHelper">
+            <summary>
+            随机数帮助类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RandomHelper.Random">
+            <summary>
+            获取线程级随机数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RandomHelper.RandomNumber(System.Int32)">
+            <summary>
+            获取随机数字
+            </summary>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RandomHelper.RandomLetter(System.Int32)">
+            <summary>
+            获取随机字符串
+            </summary>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RandomHelper.DecimalSystem36ToInt(System.String)">
+            <summary>
+            
+            B = 11
+            BBB => 36*36*11 + 36*11 +36*0 + 11
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.RegexHelper">
+            <summary>
+            正则表达式帮助类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsMobile(System.String)">
+            <summary> 判断是否为手机号码 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsTel(System.String)">
+            <summary> 判断是否为电话号码 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsEmail(System.String)">
+            <summary> 判断是否为邮箱地址 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsIp(System.String)">
+            <summary> 判断是否为IP地址 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsAccount(System.String)">
+            <summary> 判断是否帐号格式 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsPassword(System.String)">
+            <summary> 判断是否为密码格式 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsIcCard(System.String)">
+            <summary> 判断是否为身份证号码格式 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsVinNumber(System.String)">
+            <summary> 判断是否为车架号 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            判断是否匹配
+            </summary>
+            <param name="str"></param>
+            <param name="regex"></param>
+            <param name="ops"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.IsMatch(System.String,System.String)">
+            <summary>
+            判断是否匹配
+            </summary>
+            <param name="str"></param>
+            <param name="regex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.Int32,System.String)">
+            <summary>
+            获取单个正则匹配的字符
+            </summary>
+            <param name="regex">正则</param>
+            <param name="str">字符串</param>
+            <param name="ops">表达式选项</param>
+            <param name="group">组</param>
+            <param name="groupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.Match(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            获取单个正则匹配的字符
+            </summary>
+            <param name="regex">正则</param>
+            <param name="str">字符串</param>
+            <param name="group">组</param>
+            <param name="groupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.Matches(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.Int32,System.String)">
+            <summary>
+            获取正则匹配的字符列表
+            </summary>
+            <param name="docHtml"></param>
+            <param name="regStr"></param>
+            <param name="options"></param>
+            <param name="index"></param>
+            <param name="groupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.Matches(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            获取正则匹配的字符列表
+            </summary>
+            <param name="docHtml"></param>
+            <param name="regStr"></param>
+            <param name="index"></param>
+            <param name="groupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.GetLocalEmail(System.String)">
+            <summary>
+            获取局限邮件地址
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.RegexHelper.GetLocalMobile(System.String)">
+            <summary>
+            获取局限手机号码
+            </summary>
+            <param name="mobile"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.SecurityHelper">
+            <summary>
+            加密类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.Encrypt(System.String,System.String,System.String,System.String)">
+            <summary>
+            DES加密
+            </summary>
+            <param name="data">字符</param>
+            <param name="key">Key</param>
+            <param name="iv">IV</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.Encrypt(System.String)">
+            <summary>
+            DES加密
+            </summary>
+            <param name="data">待加密字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.Decrypt(System.String,System.String,System.String)">
+            <summary>
+            DES解密
+            </summary>
+            <param name="data">解密字符</param>
+            <param name="key">Key</param>
+            <param name="iv">IV</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.Decrypt(System.String)">
+            <summary>
+            DES解密
+            </summary>
+            <param name="data">解密字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.Md5(System.String,System.String)">
+            <summary>
+            Md5加密
+            </summary>
+            <param name="str">加密字符</param>
+            <param name="salt">加密盐</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.Md5(System.Byte[])">
+            <summary>
+            Md5加密
+            </summary>
+            <param name="str">加密字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.SHA1_Hash(System.String)">
+            <summary>
+            SHA1加密
+            </summary>
+            <param name="str_sha1_in"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.RSAPrivateKeyJava2DotNet(System.String)">
+            <summary>
+            RSA私钥格式转换，java->.net
+            </summary>
+            <param name="privateKey">java生成的RSA私钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.RSAPrivateKeyDotNet2Java(System.String)">
+            <summary>
+            RSA私钥格式转换，.net->java
+            </summary>
+            <param name="privateKey">.net生成的私钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.RSAPublicKeyJava2DotNet(System.String)">
+            <summary>
+            RSA公钥格式转换，java->.net
+            </summary>
+            <param name="publicKey">java生成的公钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SecurityHelper.RSAPublicKeyDotNet2Java(System.String)">
+            <summary>
+            RSA公钥格式转换，.net->java
+            </summary>
+            <param name="publicKey">.net生成的公钥</param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.SignatureHelper">
+            <summary>
+            电子签章
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.SignatureHelper.SignatureSeal(System.String,System.String)">
+            <summary>
+            对已存在的Pdf保单进行电子签章
+            </summary>
+            <param name="path">保单文件存放路径</param>
+            <param name="dict">当前保单对应文件夹</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.ToPascal(System.String)">
+            <summary>
+            字符串转换为Pascal格式
+            </summary>
+            <param name="s">要转换的字符串</param>
+            <returns>返回Pascal格式字符串</returns>
+            <example>输入myString,返回MyString这种字符串</example>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.ToCamel(System.String)">
+            <summary>
+            字符串转换为camel格式
+            </summary>
+            <param name="p_str">要转换的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.ToInt32(System.Object)">
+            <summary>
+            字符串转换为 Int32格式
+            </summary>
+            <param name="p_self"></param>
+            <returns>int类型字符串，出错返回int.MinValue</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.ToInt64(System.Object)">
+            <summary>
+            字符串转换为 Int64格式
+            </summary>
+            <param name="p_Self"></param>
+            <returns>long类型字符串，出错返回int.MinValue</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.toUtf8String(System.String)">
+            <summary>
+            转换成UTF-8字符串
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.ConvertEnCoding(System.String,System.Text.Encoding,System.Text.Encoding)">
+            <summary>
+            字符串编码转换
+            </summary>
+            <param name="str"></param>
+            <param name="oldCoding">原编码</param>
+            <param name="newEncoding">新编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.ipSecret(System.String)">
+            <summary>
+            IP地址转换为秘密的IP地址
+            </summary>
+            <param name="p_ipAddress">如：202.195.224.100</param>
+            <returns>返回202.195.224.*类型的字符串</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.IsInArray(System.String,System.String[])">
+            <summary>
+            判断字符串是否在字符串数组中
+            </summary>
+            <param name="str">要判断的字符串</param>
+            <param name="p_targrt">目标数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.toIntArray(System.String[])">
+            <summary>
+            字符串数组转换为数字数组
+            </summary>
+            <param name="p_stringArray"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.TrimBR(System.String)">
+            <summary>
+            去除换行符
+            </summary>
+            <param name="str">要进行处理的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.StringToSplit(System.String[])">
+            <summary>
+            以换行符返回数组
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.Truncate(System.String,System.Int32,System.String)">
+            <summary>
+            截取一段文字.
+            </summary>
+            <param name="str">要截取的原文本.</param>
+            <param name="p_maxLength">截取长度，多少个字</param>
+            <param name="suffix">The suffix.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.StripHtml(System.String)">
+            <summary>
+            去除全部HTML标签
+            </summary>
+            <param name="str">原始字符串</param>
+            <returns>返回无任何标签的字符串</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.RTrim(System.String)">
+            <summary>
+            删除字符串尾部的回车/换行/空格
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.Getfilename">
+            <summary>
+            生成以日期时间为基础的随机字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.IsSafeSqlString(System.String)">
+            <summary>
+            检测是否有Sql危险字符
+            </summary>
+            <param name="str">要判断字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.StringHelper.IsanEmailString(System.String)">
+            <summary>
+            检测是否是邮箱地址格式
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Helper.XmlHelper">
+            <summary>
+            Xml帮助类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.XmlHelper.XmlSerialize(System.Object,System.Text.Encoding)">
+            <summary>
+            将一个对象序列化为XML字符串
+            </summary>
+            <param name="obj">要序列化的对象</param>
+            <param name="encoding">编码方式</param>
+            <returns>序列化产生的XML字符串</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.XmlHelper.XmlSerializeToFile(System.Object,System.String,System.Text.Encoding)">
+            <summary>
+            将一个对象按XML序列化的方式写入到一个文件
+            </summary>
+            <param name="obj">要序列化的对象</param>
+            <param name="path">保存文件路径</param>
+            <param name="encoding">编码方式</param>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.XmlHelper.XmlDeserialize``1(System.String,System.Text.Encoding)">
+            <summary>
+            从XML字符串中反序列化对象
+            </summary>
+            <typeparam name="T">结果对象类型</typeparam>
+            <param name="xml">包含对象的XML字符串</param>
+            <param name="encoding">编码方式</param>
+            <returns>反序列化得到的对象</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.XmlHelper.XmlDeserializeFromFile``1(System.String,System.Text.Encoding)">
+            <summary>
+            读入一个文件，并按XML的方式反序列化对象。
+            </summary>
+            <typeparam name="T">结果对象类型</typeparam>
+            <param name="path">文件路径</param>
+            <param name="encoding">编码方式</param>
+            <returns>反序列化得到的对象</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.XmlHelper.XmlSerialize(System.String,System.Object)">
+            <summary>
+            xml序列化
+            </summary>
+            <param name="path">xml文件路径</param>
+            <param name="obj">序列化对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Helper.XmlHelper.XmlDeserialize``1(System.String)">
+            <summary>
+            xml反序列化
+            </summary>
+            <typeparam name="T">xml序列化类型</typeparam>
+            <param name="path">xml文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.ILog.IsTraceEnabled">
+            <summary>
+            获取 是否允许<see cref="F:ICheBao.Utility.Logging.LogLevel.Trace"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.ILog.IsDebugEnabled">
+            <summary>
+            获取 是否允许<see cref="F:ICheBao.Utility.Logging.LogLevel.Debug"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.ILog.IsInfoEnabled">
+            <summary>
+            获取 是否允许<see cref="F:ICheBao.Utility.Logging.LogLevel.Info"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.ILog.IsWarnEnabled">
+            <summary>
+            获取 是否允许<see cref="F:ICheBao.Utility.Logging.LogLevel.Warn"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.ILog.IsErrorEnabled">
+            <summary>
+            获取 是否允许<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.ILog.IsFatalEnabled">
+            <summary>
+            获取 是否允许<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>级别的日志
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Logging.ILogger">
+            <summary>
+            日志行为接口
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Trace``1(``0)">
+            <summary>
+            追踪泛型<see cref="F:ICheBao.Utility.Logging.LogLevel.Trace"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="message"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Trace(System.String,System.Object[])">
+            <summary>
+            追踪，字符串格式化<see cref="F:ICheBao.Utility.Logging.LogLevel.Trace"/>
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Debug``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Debug"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Debug(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Debug"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Info``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Info"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Info(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Info"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Warn``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Warn"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Warn(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Warn"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Error``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Error(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Error``1(``0,System.Exception)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>日志消息，并记录异常
+            </summary>
+            <param name="message">日志消息</param>
+            <param name="exception">异常</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Error(System.String,System.Exception,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>格式化日志消息，并记录异常
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="exception">异常</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Fatal``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Fatal(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Fatal``1(``0,System.Exception)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>日志消息，并记录异常
+            </summary>
+            <param name="message">日志消息</param>
+            <param name="exception">异常</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILogger.Fatal(System.String,System.Exception,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>格式化日志消息，并记录异常
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="exception">异常</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="T:ICheBao.Utility.Logging.ILoggerAdapter">
+            <summary>
+            日志实现适配器
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILoggerAdapter.GetLogger(System.Type)">
+            <summary>
+            由指定类型获取<see cref="T:ICheBao.Utility.Logging.ILog"/>日志实例
+            </summary>
+            <param name="type">指定类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.ILoggerAdapter.GetLogger(System.String)">
+            <summary>
+            由指定名称获取<see cref="T:ICheBao.Utility.Logging.ILog"/>日志实例
+            </summary>
+            <param name="name">指定名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.#ctor">
+            <summary>
+            初始化一个<see cref="T:ICheBao.Utility.Logging.LogBase"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.GetWriteHandler">
+            <summary>
+            获取日志输出处理委托实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.WriteInternal(ICheBao.Utility.Logging.LogLevel,System.Object,System.Exception)">
+            <summary>
+            获取日志输出处理委托实例
+            </summary>
+            <param name="level">日志输出级别</param>
+            <param name="message">日志消息</param>
+            <param name="exception">日志异常</param>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.LogBase.IsTraceEnabled">
+            <summary>
+            获取 是否允许输出<see cref="F:ICheBao.Utility.Logging.LogLevel.Trace"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.LogBase.IsDebugEnabled">
+            <summary>
+            获取 是否允许输出<see cref="F:ICheBao.Utility.Logging.LogLevel.Debug"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.LogBase.IsInfoEnabled">
+            <summary>
+            获取 是否允许输出<see cref="F:ICheBao.Utility.Logging.LogLevel.Info"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.LogBase.IsWarnEnabled">
+            <summary>
+            获取 是否允许输出<see cref="F:ICheBao.Utility.Logging.LogLevel.Warn"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.LogBase.IsErrorEnabled">
+            <summary>
+            获取 是否允许输出<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>级别的日志
+            </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Logging.LogBase.IsFatalEnabled">
+            <summary>
+            获取 是否允许输出<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>级别的日志
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Trace``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Trace"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Trace(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Trace"/>日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Debug``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Debug"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Debug(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Debug"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Info``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Info"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Info(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Info"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Warn``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Warn"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Warn(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Warn"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Error``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Error(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Error``1(``0,System.Exception)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>日志消息，并记录异常
+            </summary>
+            <param name="message">日志消息</param>
+            <param name="exception">异常</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Error(System.String,System.Exception,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>格式化日志消息，并记录异常
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="exception">异常</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Fatal``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Fatal(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Fatal``1(``0,System.Exception)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>日志消息，并记录异常
+            </summary>
+            <param name="message">日志消息</param>
+            <param name="exception">异常</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogBase.Fatal(System.String,System.Exception,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>格式化日志消息，并记录异常
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="exception">异常</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="T:ICheBao.Utility.Logging.Logger">
+            <summary>
+            日志的记录者
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Trace``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Trace"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Trace(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Trace"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Debug``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Debug"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Debug(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Debug"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Info``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Info"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Info(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Info"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Warn``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Warn"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Warn(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Warn"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Error``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Error(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Error``1(``0,System.Exception)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>日志消息，并记录异常
+            </summary>
+            <param name="message">日志消息</param>
+            <param name="exception">异常</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Error(System.String,System.Exception,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Error"/>格式化日志消息，并记录异常
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="exception">异常</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Fatal``1(``0)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>日志消息
+            </summary>
+            <param name="message">日志消息</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Fatal(System.String,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>格式化日志消息
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Fatal``1(``0,System.Exception)">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>日志消息，并记录异常
+            </summary>
+            <param name="message">日志消息</param>
+            <param name="exception">异常</param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.Logger.Fatal(System.String,System.Exception,System.Object[])">
+            <summary>
+            写入<see cref="F:ICheBao.Utility.Logging.LogLevel.Fatal"/>格式化日志消息，并记录异常
+            </summary>
+            <param name="format">日志消息格式</param>
+            <param name="exception">异常</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="T:ICheBao.Utility.Logging.LoggerAdapterBase">
+            <summary>
+            按名称缓存的日志实现适配器基类，用于创建并管理指定类型的日志实例
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LoggerAdapterBase.#ctor">
+            <summary>
+            初始化一个<see cref="T:ICheBao.Utility.Logging.LoggerAdapterBase"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LoggerAdapterBase.GetLogger(System.Type)">
+            <summary>
+            由指定类型获取<see cref="T:ICheBao.Utility.Logging.ILog"/>日志实例
+            </summary>
+            <param name="type">指定类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LoggerAdapterBase.GetLogger(System.String)">
+            <summary>
+            由指定名称获取<see cref="T:ICheBao.Utility.Logging.ILog"/>日志实例
+            </summary>
+            <param name="name">指定名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LoggerAdapterBase.CreateLogger(System.String)">
+            <summary>
+            创建指定名称的缓存实例
+            </summary>
+            <param name="name">指定名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LoggerAdapterBase.ClearLoggerCache">
+            <summary>
+            清除缓存中的日志实例
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Logging.LogLevel">
+            <summary>
+            表示日志输出级别的枚举
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Logging.LogLevel.All">
+            <summary>
+            输出所有级别的日志
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Logging.LogLevel.Trace">
+            <summary>
+            表示跟踪的日志级别
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Logging.LogLevel.Debug">
+            <summary>
+            表示调试的日志级别
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Logging.LogLevel.Info">
+            <summary>
+            表示消息的日志级别
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Logging.LogLevel.Warn">
+            <summary>
+            表示警告的日志级别
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Logging.LogLevel.Error">
+            <summary>
+            表示错误的日志级别
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Logging.LogLevel.Fatal">
+            <summary>
+            表示严重错误的日志级别
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Logging.LogLevel.Off">
+            <summary>
+            关闭所有日志，不输出日志
+            </summary>
+        </member>
+        <member name="F:ICheBao.Utility.Logging.LogManager.LoggerAdapters">
+            <summary>
+            日志适配器集合
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogManager.#cctor">
+            <summary>
+            静态构造
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogManager.IsEnableLevel(ICheBao.Utility.Logging.LogLevel)">
+            <summary>
+            是否启用日志级别
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogManager.AddAdapter(ICheBao.Utility.Logging.ILoggerAdapter)">
+            <summary>
+            添加适配器
+            </summary>
+            <param name="adapter"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogManager.RemoveAdapter(ICheBao.Utility.Logging.ILoggerAdapter)">
+            <summary>
+            移除适配器
+            </summary>
+            <param name="adapter"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogManager.Logger(System.String)">
+            <summary>
+            获取日志记录实例
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogManager.Logger(System.Type)">
+            <summary>
+            获取日志记录实例
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Logging.LogManager.Logger``1">
+            <summary>
+            获取日志记录实例
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:ICheBao.Utility.Singleton">
+            <summary> 单例辅助 </summary>
+        </member>
+        <member name="P:ICheBao.Utility.Singleton.AllSingletons">
+            <summary>
+            Dictionary of type to singleton instances.
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Singleton`1">
+            <summary> 单例泛型辅助 </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:ICheBao.Utility.SingletonList`1">
+            <summary>
+            单例泛型列表辅助
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ICheBao.Utility.SingletonList`1.Instance">
+            <summary>
+            The singleton instance for the specified type T. Only one instance (at the time) of this list for each type of T.
+            </summary>
+        </member>
+        <member name="T:ICheBao.Utility.Utils">
+            <summary>
+            常用工具类
+            </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.GetMapPath(System.String)">
+            <summary>
+            获得当前绝对路径
+            </summary>
+            <param name="strPath">指定的路径</param>
+            <returns>绝对路径</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.FormatNowTime(System.String)">
+            <summary>
+            获取格式化后的当前时间字符串
+            </summary>
+            <param name="format">格式化字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.ShowTime(System.DateTime,System.String)">
+            <summary>
+            显示时间
+            </summary>
+            <param name="date">当前时间</param>
+            <param name="format">格式化字符串</param>
+            <returns>刚刚、*分钟前、*小时前、format结果</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.GetRealIp(System.Web.HttpContext)">
+            <summary>
+            获取真实IP
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.GetRealIp">
+            <summary>
+            获取真实IP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.WatchAction(System.String,System.Action)">
+            <summary> 方法监控 </summary>
+            <param name="name"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.Rad(System.Double)">
+            <summary> 转化为弧度 </summary>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.LantitudeLongitudeDist(System.Double,System.Double,System.Double,System.Double)">
+            <summary> 经纬度两点距离。单位：米 </summary>
+            <param name="lon1">第一点经度</param>
+            <param name="lat1">第一点纬度</param>
+            <param name="lon2">第二点经度</param>
+            <param name="lat2">第二点纬度</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.ChsString2Spell(System.String)">
+            <summary>
+            一串中文字符串转化为拼音
+            如果给定的字符为非中文汉字将不执行转化，直接返回原字符。
+            Copy To Shoy 使用请著名出处
+            </summary>
+            <param name="chsstr">指定汉字</param>
+            <returns>拼音码</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.SingleChs2Spell(System.String)">
+            <summary>
+            单个汉字转化为拼音。
+            Copy To Shoy 使用请著名出处
+            </summary>
+            <param name="singleChs">单个汉字</param>
+            <returns>拼音</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.GetShortSpell(System.String)">
+            <summary> 
+            得到一个汉字的拼音第一个字母，如果是一个英文字母则直接返回大写字母 。
+            Copy To Shoy 使用请著名出处
+            </summary> 
+            <param name="cnChar">单个汉字</param> 
+            <returns>单个大写字母</returns> 
+        </member>
+        <member name="M:ICheBao.Utility.Utils.ConvertIntToUppercaseAmount(System.String)">
+            <summary>
+            转换整数为大写金额
+            最高精度为垓，保留小数点后4位，实际精度为亿兆已经足够了，理论上精度无限制，如下所示：
+            序号:...30.29.28.27.26.25.24  23.22.21.20.19.18  17.16.15.14.13  12.11.10.9   8 7.6.5.4  . 3.2.1.0
+            单位:...垓兆亿萬仟佰拾        京亿萬仟佰拾       兆萬仟佰拾      亿仟佰拾     萬仟佰拾元 . 角分厘毫
+            数值:...1000000               000000             00000           0000         00000      . 0000
+            下面列出网上搜索到的数词单位：
+            元、十、百、千、万、亿、兆、京、垓、秭、穰、沟、涧、正、载、极
+            </summary>
+            <param name="capValue">整数值</param>
+            <returns>返回大写金额</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.ConvertDecToUppercaseAmount(System.String,System.Boolean)">
+            <summary>
+            转换小数为大写金额
+            </summary>
+            <param name="capValue">小数值</param>
+            <param name="addZero">是否增加零位</param>
+            <returns>返回大写金额</returns>
+        </member>
+        <member name="M:ICheBao.Utility.Utils.GetChineseMoney(System.Decimal)">
+            <summary>
+            人民币大写金额
+            </summary>
+            <param name="value">人民币数字金额值</param>
+            <returns>返回人民币大写金额</returns>
+        </member>
+    </members>
+</doc>

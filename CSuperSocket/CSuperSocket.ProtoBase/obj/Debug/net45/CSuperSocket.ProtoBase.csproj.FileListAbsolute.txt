@@ -1,0 +1,16 @@
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\bin\Debug\net45\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\bin\Debug\net45\CSuperSocket.ProtoBase.pdb
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.AssemblyInfo.cs
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\opensource\SuperSocket-NetCore-master\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.pdb
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\bin\Debug\net45\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\bin\Debug\net45\CSuperSocket.ProtoBase.pdb
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.csproj.CoreCompileInputs.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.AssemblyInfoInputs.cache
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.AssemblyInfo.cs
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.pdb
+D:\WorkSpace\ICB\ICB.Library\ICB.Library\CSuperSocket\SuperSocket.ProtoBase\obj\Debug\net45\CSuperSocket.ProtoBase.csprojResolveAssemblyReference.cache

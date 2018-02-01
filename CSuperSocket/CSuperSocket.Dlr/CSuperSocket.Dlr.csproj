@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>CSuperSocket.Dlr</PackageId>
+    <PackageTags>socket;CSuperSocket</PackageTags>
+    <Title>SuperSocket.Dlr</Title>
+    <Description>CSuperSocket.Library</Description>
+    <Authors>Kerry Jiang;Sarco;DynamicBlue</Authors>
+    <!--<TargetFrameworks>netstandard2.0;net40;net45;net451;net452</TargetFrameworks>-->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.1.2</Version>
+    <Product>CSuperSocket.Dlr</Product>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Kerry Jiang;Sarco;DynamicBlue</Company>
+    <AssemblyVersion>2.1.2.0</AssemblyVersion>
+    <FileVersion>2.1.2.0</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD2_0;LINUX</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSuperSocket.SocketBase\CSuperSocket.SocketBase.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\Reference\DLR\Net40\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath) $(SolutionDir)bin\$(TargetName).dll" />
+  </Target>
+
+</Project>
