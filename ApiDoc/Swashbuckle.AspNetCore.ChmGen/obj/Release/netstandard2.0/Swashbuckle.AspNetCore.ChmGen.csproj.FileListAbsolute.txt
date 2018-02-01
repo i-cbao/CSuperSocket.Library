@@ -1,0 +1,14 @@
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\bin\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.deps.json
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\bin\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\bin\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\bin\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.xml
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\bin\Release\netstandard2.0\Swashbuckle.AspNetCore.Chm.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\bin\Release\netstandard2.0\Swashbuckle.AspNetCore.Chm.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\bin\Release\netstandard2.0\Swashbuckle.AspNetCore.Chm.xml
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.AssemblyInfo.cs
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.xml
+D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Release\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.pdb

@@ -34,3 +34,12 @@ D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\net
 D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\netstandard2.0\CSuperSocket.ProtoBase.dll
 D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\netstandard2.0\CSuperSocket.ProtoBase.pdb
 D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\netstandard2.0\CSuperSocket.ProtoBase.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\bin\Release\netstandard2.0\CSuperSocket.ProtoBase.deps.json
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\bin\Release\netstandard2.0\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\bin\Release\netstandard2.0\CSuperSocket.ProtoBase.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\netstandard2.0\CSuperSocket.ProtoBase.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\netstandard2.0\CSuperSocket.ProtoBase.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\netstandard2.0\CSuperSocket.ProtoBase.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\netstandard2.0\CSuperSocket.ProtoBase.AssemblyInfo.cs
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\netstandard2.0\CSuperSocket.ProtoBase.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Release\netstandard2.0\CSuperSocket.ProtoBase.pdb

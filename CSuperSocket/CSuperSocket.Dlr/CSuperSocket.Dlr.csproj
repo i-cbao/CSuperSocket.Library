@@ -26,7 +26,7 @@
     </Reference>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(TargetPath) $(SolutionDir)bin\$(TargetName).dll" />
+    <Exec Command="copy $(TargetPath)  $(SolutionDir)bin\CSuperSocket\$(TargetName).dll" />
   </Target>
 
 </Project>

@@ -42,3 +42,14 @@ D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Release\ne
 D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Release\netstandard2.0\CSuperSocket.Common.pdb
 D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Release\netstandard2.0\CSuperSocket.SocketBase.dll
 D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Release\netstandard2.0\CSuperSocket.SocketBase.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Release\netstandard2.0\CSuperSocket.SocketBase.deps.json
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Release\netstandard2.0\CSuperSocket.SocketBase.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Release\netstandard2.0\CSuperSocket.SocketBase.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Release\netstandard2.0\CSuperSocket.Common.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Release\netstandard2.0\CSuperSocket.Common.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Release\netstandard2.0\CSuperSocket.SocketBase.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Release\netstandard2.0\CSuperSocket.SocketBase.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Release\netstandard2.0\CSuperSocket.SocketBase.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Release\netstandard2.0\CSuperSocket.SocketBase.AssemblyInfo.cs
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Release\netstandard2.0\CSuperSocket.SocketBase.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Release\netstandard2.0\CSuperSocket.SocketBase.pdb

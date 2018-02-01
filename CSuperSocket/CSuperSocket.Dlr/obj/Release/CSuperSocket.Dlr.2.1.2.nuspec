@@ -16,6 +16,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.Dlr\bin\Release\netstandard2.0\CSuperSocket.Dlr.dll" target="lib\netstandard2.0\CSuperSocket.Dlr.dll" />
+    <file src="D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Dlr\bin\Release\netstandard2.0\CSuperSocket.Dlr.dll" target="lib\netstandard2.0\CSuperSocket.Dlr.dll" />
   </files>
 </package>

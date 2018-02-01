@@ -39,6 +39,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{B1DE20
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestPlug", "MiddleWare\WebApi\plugs\TestPlug\TestPlug.csproj", "{97B4A2C4-14DD-465C-BB0C-78836E1859CA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{11D9A622-C759-4417-9815-6177EEC17B5D}"
+	ProjectSection(SolutionItems) = preProject
+		bin\ApiDoc\Swashbuckle.AspNetCore.ApiDoc.2.0.0.nupkg = bin\ApiDoc\Swashbuckle.AspNetCore.ApiDoc.2.0.0.nupkg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{1971E05F-4D6B-4F9A-A1DB-8AE3102B122B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -112,6 +119,8 @@ Global
 		{15218C16-5C60-4B22-84CA-514674BFC38C} = {256BD66F-6386-477C-9B1E-95C60A94325C}
 		{B1DE20AB-C328-47F6-929B-06553BA8FD69} = {71DF5516-09E5-4F57-9DF9-825D05E2EB8F}
 		{97B4A2C4-14DD-465C-BB0C-78836E1859CA} = {1BF724C4-04FF-44BB-A876-B4E123CCD4E5}
+		{11D9A622-C759-4417-9815-6177EEC17B5D} = {256BD66F-6386-477C-9B1E-95C60A94325C}
+		{1971E05F-4D6B-4F9A-A1DB-8AE3102B122B} = {4EA75670-2928-42EC-B9B9-2C82B45B62E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8684CB3-1BCD-49D5-9B62-88464D9E1F61}

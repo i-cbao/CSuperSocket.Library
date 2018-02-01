@@ -33,3 +33,12 @@ D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netsta
 D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.AssemblyInfo.cs
 D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.dll
 D:\WorkSpace\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\bin\Release\netstandard2.0\CSuperSocket.Common.deps.json
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\bin\Release\netstandard2.0\CSuperSocket.Common.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\bin\Release\netstandard2.0\CSuperSocket.Common.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.csprojResolveAssemblyReference.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.csproj.CoreCompileInputs.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.AssemblyInfoInputs.cache
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.AssemblyInfo.cs
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.dll
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.pdb
