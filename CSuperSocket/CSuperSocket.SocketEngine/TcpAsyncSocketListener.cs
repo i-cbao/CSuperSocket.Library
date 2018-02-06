@@ -42,7 +42,7 @@ namespace CSuperSocket.SocketEngine
 
                 if (config.PlatformType != PlatformType.Linux)
                 {
-                    Console.WriteLine("开始进入异常片段 该句在linux下不被支持 m_ListenSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);");
+                    //Console.WriteLine("开始进入异常片段 该句在linux下不被支持 m_ListenSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);");
                     m_ListenSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);
                 }
 

@@ -45,6 +45,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{11D9A622
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{1971E05F-4D6B-4F9A-A1DB-8AE3102B122B}"
+	ProjectSection(SolutionItems) = preProject
+		bin\CSuperSocket\CSuperSocket.All.2.1.2.nupkg = bin\CSuperSocket\CSuperSocket.All.2.1.2.nupkg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
