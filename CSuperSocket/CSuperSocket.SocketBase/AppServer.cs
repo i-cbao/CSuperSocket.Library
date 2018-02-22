@@ -130,7 +130,6 @@ namespace CSuperSocket.SocketBase
             if (m_SessionDict.TryAdd(sessionID, appSession))
                 return true;
 
-            if (Logger.IsErrorEnabled)
                 Logger.Error(appSession, "The session is refused because the it's ID already exists!");
 
             return false;
@@ -176,7 +175,6 @@ namespace CSuperSocket.SocketBase
                 TAppSession removedSession;
                 if (!m_SessionDict.TryRemove(sessionID, out removedSession))
                 {
-                    if (Logger.IsErrorEnabled)
                         Logger.Error(session, "Failed to remove this session, Because it has't been in session container!");
                 }
             }
@@ -227,14 +225,12 @@ namespace CSuperSocket.SocketBase
 
                     System.Threading.Tasks.Parallel.ForEach(timeOutSessions, s =>
                     {
-                        if (Logger.IsInfoEnabled)
                             Logger.Info(s, string.Format("The session will be closed for {0} timeout, the session start time: {1}, last active time: {2}!", now.Subtract(s.LastActiveTime).TotalSeconds, s.StartTime, s.LastActiveTime));
                         s.Close(CloseReason.TimeOut);
                     });
                 }
                 catch (Exception e)
                 {
-                    if (Logger.IsErrorEnabled)
                         Logger.Error("Clear idle session error!", e);
                 }
                 finally

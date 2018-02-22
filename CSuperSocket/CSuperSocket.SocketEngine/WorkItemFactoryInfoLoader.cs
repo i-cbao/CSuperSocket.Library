@@ -1,5 +1,4 @@
 ﻿using CSuperSocket.SocketBase.Config;
-using CSuperSocket.SocketBase.Logging;
 using CSuperSocket.SocketBase.Provider;
 using System;
 using System.Collections.Generic;
@@ -9,53 +8,17 @@ namespace CSuperSocket.SocketEngine
 {
     class WorkItemFactoryInfoLoader : IDisposable
     {
-        private ProviderFactoryInfo m_DefaultLogFactory;
+       
 
         private IConfigurationSource m_Config;
 
-        public WorkItemFactoryInfoLoader(IConfigurationSource config, ILogFactory passedInLogFactory)
-            : this(config)
-        {
-            if (passedInLogFactory != null)
-                m_DefaultLogFactory = new ProviderFactoryInfo(ProviderKey.LogFactory, string.Empty, passedInLogFactory);
-        }
 
         public WorkItemFactoryInfoLoader(IConfigurationSource config)
         {
             m_Config = config;
         }
 
-        public ProviderFactoryInfo GetBootstrapLogFactory()
-        {
-            if (m_DefaultLogFactory != null)
-                return m_DefaultLogFactory;
-
-            if (string.IsNullOrEmpty(m_Config.LogFactory))
-            {
-                m_DefaultLogFactory = new ProviderFactoryInfo(ProviderKey.LogFactory, string.Empty, typeof(Log4NetLogFactory));
-                return m_DefaultLogFactory;
-            }
-
-            ProviderFactoryInfo factory = null;
-
-            if (m_Config.LogFactories != null && m_Config.LogFactories.Count() > 0)
-            {
-                var logConfig = m_Config.LogFactories.FirstOrDefault(f =>
-                    f.Name.Equals(m_Config.LogFactory, StringComparison.OrdinalIgnoreCase));
-
-                if (logConfig != null)
-                {
-                    factory = new ProviderFactoryInfo(ProviderKey.LogFactory, m_Config.LogFactory, ValidateProviderType(logConfig.Type));
-                }
-            }
-
-            if (factory == null)
-                throw new Exception(string.Format("the specific log factory '{0}' cannot be found!", m_Config.LogFactory));
-
-            m_DefaultLogFactory = factory;
-
-            return factory;
-        }
+      
 
         public List<WorkItemFactoryInfo> LoadResult(Func<IServerConfig, IServerConfig> serverConfigResolver)
         {
@@ -70,7 +33,7 @@ namespace CSuperSocket.SocketEngine
             var connectionFilterFactories = InitializeProviderFactories(ProviderKey.ConnectionFilter, m_Config.ConnectionFilters);
 
             //Initialize log factories
-            var logFactoryFactories = InitializeProviderFactories(ProviderKey.LogFactory, m_Config.LogFactories, m_DefaultLogFactory);
+           
 
             //Initialize Receive filter factories
             var receiveFilterFactories = InitializeProviderFactories(ProviderKey.ReceiveFilterFactory, m_Config.ReceiveFilterFactories);
@@ -146,24 +109,10 @@ namespace CSuperSocket.SocketEngine
                 if (!string.IsNullOrEmpty(logFactoryName))
                 {
                     logFactoryName = logFactoryName.Trim();
-
-                    var logProviderFactory = logFactoryFactories.FirstOrDefault(p => p.Name.Equals(logFactoryName, StringComparison.OrdinalIgnoreCase));
-
-                    if (logProviderFactory == null)
-                        throw new Exception(string.Format("the specific log factory '{0}' cannot be found!", logFactoryName));
-
-                    workItemFactory.LogFactory = logProviderFactory;
                 }
-                else
-                {
-                    if (m_DefaultLogFactory != null)
-                        workItemFactory.LogFactory = m_DefaultLogFactory;
-                    else
-                        workItemFactory.LogFactory = GetBootstrapLogFactory();
-                }
+                
 
-                if (workItemFactory.LogFactory != null)
-                    factories.Add(workItemFactory.LogFactory);
+               
 
                 //Initialize Receive filter factory
                 if (!string.IsNullOrEmpty(serverConfig.ReceiveFilterFactory))

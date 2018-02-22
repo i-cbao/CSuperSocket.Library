@@ -33,3 +33,4 @@ D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Debug\netstandard2.0\CSuperSocket.ProtoBase.AssemblyInfo.cs
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Debug\netstandard2.0\CSuperSocket.ProtoBase.dll
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Debug\netstandard2.0\CSuperSocket.ProtoBase.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.ProtoBase\obj\Debug\netstandard2.0\CSuperSocket.ProtoBase.csprojResolveAssemblyReference.cache

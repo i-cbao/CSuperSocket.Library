@@ -37,7 +37,6 @@ namespace CSuperSocket.SocketBase.Provider
             ServerType = new ProviderKey { Name = "ServerType", Type = typeof(IAppServer) };
             SocketServerFactory = new ProviderKey { Name = "SocketServerFactory", Type = typeof(ISocketServerFactory) };
             ConnectionFilter = new ProviderKey { Name = "ConnectionFilter", Type = typeof(IConnectionFilter) };
-            LogFactory = new ProviderKey { Name = "LogFactory", Type = typeof(ILogFactory) };
             ReceiveFilterFactory = new ProviderKey { Name = "ReceiveFilterFactory", Type = typeof(IReceiveFilterFactory) };
             CommandLoader = new ProviderKey { Name = "CommandLoader", Type = typeof(ICommandLoader) };
         }
@@ -57,10 +56,7 @@ namespace CSuperSocket.SocketBase.Provider
         /// </summary>
         public static ProviderKey ConnectionFilter { get; private set; }
 
-        /// <summary>
-        /// Gets the log factory.
-        /// </summary>
-        public static ProviderKey LogFactory { get; private set; }
+     
 
         /// <summary>
         /// Gets the Receive filter factory.

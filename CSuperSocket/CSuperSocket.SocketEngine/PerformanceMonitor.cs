@@ -1,7 +1,7 @@
 ﻿using CSuperSocket.SocketBase;
 using CSuperSocket.SocketBase.Config;
-using CSuperSocket.SocketBase.Logging;
 using CSuperSocket.SocketBase.Metadata;
+using Dynamic.Core.Log;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,7 +17,7 @@ namespace CSuperSocket.SocketEngine
 
         private Timer m_PerformanceTimer;
         private int m_TimerInterval;
-        private ILog m_PerfLog;
+        private ILogger m_PerfLog;
 
         private IWorkItem[] m_AppServers;
 
@@ -27,9 +27,9 @@ namespace CSuperSocket.SocketEngine
 
         private List<KeyValuePair<string, StatusInfoAttribute[]>> m_ServerStatusMetadataSource;
 
-        public PerformanceMonitor(IRootConfig config, IEnumerable<IWorkItem> appServers, IWorkItem serverManager, ILogFactory logFactory)
+        public PerformanceMonitor(IRootConfig config, IEnumerable<IWorkItem> appServers, IWorkItem serverManager)
         {
-            m_PerfLog = logFactory.GetLog("Performance");
+            m_PerfLog = LoggerManager.GetLogger("Performance");
 
             m_AppServers = appServers.ToArray();
 

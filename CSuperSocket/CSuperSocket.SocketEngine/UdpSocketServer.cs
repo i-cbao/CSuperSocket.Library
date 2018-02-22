@@ -70,8 +70,7 @@ namespace CSuperSocket.SocketEngine
             }
             catch (Exception e)
             {
-                if (AppServer.Logger.IsErrorEnabled)
-                    AppServer.Logger.Error("Process UDP package error!", e);
+               AppServer.Logger.Error("Process UDP package error!", e);
             }
         }
 
@@ -115,7 +114,6 @@ namespace CSuperSocket.SocketEngine
             }
             catch (Exception exc)
             {
-                if (AppServer.Logger.IsErrorEnabled)
                     AppServer.Logger.Error("Failed to parse UDP package!", exc);
                 return;
             }
@@ -124,21 +122,20 @@ namespace CSuperSocket.SocketEngine
 
             if (rest > 0)
             {
-                if (AppServer.Logger.IsErrorEnabled)
                     AppServer.Logger.Error("The output parameter rest must be zero in this case!");
                 return;
             }
 
             if (udpRequestInfo == null)
             {
-                if (AppServer.Logger.IsErrorEnabled)
+                
                     AppServer.Logger.Error("Invalid UDP package format!");
                 return;
             }
 
             if (string.IsNullOrEmpty(udpRequestInfo.SessionID))
             {
-                if (AppServer.Logger.IsErrorEnabled)
+             
                     AppServer.Logger.Error("Failed to get session key from UDP package!");
                 return;
             }
@@ -195,8 +192,8 @@ namespace CSuperSocket.SocketEngine
         {
             if (m_ConnectionCount >= AppServer.Config.MaxConnectionNumber)
             {
-                if (AppServer.Logger.IsErrorEnabled)
-                    AppServer.Logger.ErrorFormat("Cannot accept a new UDP connection from {0}, the max connection number {1} has been exceed!",
+             
+                    AppServer.Logger.Error("Cannot accept a new UDP connection from {0}, the max connection number {1} has been exceed!",
                         remoteEndPoint.ToString(), AppServer.Config.MaxConnectionNumber);
 
                 return false;

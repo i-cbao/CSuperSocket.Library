@@ -117,16 +117,9 @@ namespace CSuperSocket.SocketEngine
             throw new NotSupportedException();
         }
 
-        public bool Initialize(ILogFactory logFactory)
-        {
-            throw new NotSupportedException();
-        }
+      
 
-        public bool Initialize(Func<IServerConfig, IServerConfig> serverConfigResolver, ILogFactory logFactory)
-        {
-            throw new NotSupportedException();
-        }
-
+      
         public StartResult Start()
         {
             throw new NotSupportedException();

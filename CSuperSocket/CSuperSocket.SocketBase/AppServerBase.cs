@@ -1,11 +1,11 @@
 ﻿using CSuperSocket.Common;
 using CSuperSocket.SocketBase.Command;
 using CSuperSocket.SocketBase.Config;
-using CSuperSocket.SocketBase.Logging;
 using CSuperSocket.SocketBase.Metadata;
 using CSuperSocket.SocketBase.Protocol;
 using CSuperSocket.SocketBase.Provider;
 using CSuperSocket.SocketBase.Security;
+using Dynamic.Core.Log;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -17,6 +17,9 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
+
+
 
 namespace CSuperSocket.SocketBase
 {
@@ -104,7 +107,7 @@ namespace CSuperSocket.SocketBase
         /// <summary>
         /// Gets the logger assosiated with this object.
         /// </summary>
-        public ILog Logger { get; private set; }
+        public ILogger Logger { get; private set; }
 
         /// <summary>
         /// Gets the bootstrap of this appServer instance.
@@ -147,13 +150,7 @@ namespace CSuperSocket.SocketBase
         public DateTime StartedTime { get; private set; }
 
 
-        /// <summary>
-        /// Gets or sets the log factory.
-        /// </summary>
-        /// <value>
-        /// The log factory.
-        /// </value>
-        public ILogFactory LogFactory { get; private set; }
+        
 
 
         /// <summary>
@@ -206,16 +203,15 @@ namespace CSuperSocket.SocketBase
 
                 if (!loader.Initialize(RootConfig, this))
                 {
-                    if (Logger.IsErrorEnabled)
-                        Logger.ErrorFormat("Failed initialize the command loader {0}.", loader.ToString());
+                    
+                        Logger.Error("Failed initialize the command loader {0}.", loader.ToString());
                     return false;
                 }
 
                 IEnumerable<ICommand<TAppSession, TRequestInfo>> commands;
                 if (!loader.TryLoadCommands(out commands))
                 {
-                    if (Logger.IsErrorEnabled)
-                        Logger.ErrorFormat("Failed load commands from the command loader {0}.", loader.ToString());
+                        Logger.Error("Failed load commands from the command loader {0}.", loader.ToString());
                     return false;
                 }
 
@@ -225,7 +221,6 @@ namespace CSuperSocket.SocketBase
                     {
                         if (discoveredCommands.ContainsKey(c.Name))
                         {
-                            if (Logger.IsErrorEnabled)
                                 Logger.Error("Duplicated name command has been found! Command name: " + c.Name);
                             return false;
                         }
@@ -234,13 +229,12 @@ namespace CSuperSocket.SocketBase
 
                         if (castedCommand == null)
                         {
-                            if (Logger.IsErrorEnabled)
+                            
                                 Logger.Error("Invalid command has been found! Command name: " + c.Name);
                             return false;
                         }
 
-                        if (Logger.IsDebugEnabled)
-                            Logger.DebugFormat("The command {0}({1}) has been discovered", castedCommand.Name, castedCommand.ToString());
+                            Logger.Debug("The command {0}({1}) has been discovered", castedCommand.Name, castedCommand.ToString());
 
                         discoveredCommands.Add(c.Name, castedCommand);
                     }
@@ -263,20 +257,17 @@ namespace CSuperSocket.SocketBase
                 if (c.UpdateAction == CommandUpdateAction.Remove)
                 {
                     workingDict.Remove(c.Command.Name);
-                    if (Logger.IsInfoEnabled)
-                        Logger.InfoFormat("The command '{0}' has been removed from this server!", c.Command.Name);
+                        Logger.Info("The command '{0}' has been removed from this server!", c.Command.Name);
                 }
                 else if (c.UpdateAction == CommandUpdateAction.Add)
                 {
                     workingDict.Add(c.Command.Name, c.Command);
-                    if (Logger.IsInfoEnabled)
-                        Logger.InfoFormat("The command '{0}' has been added into this server!", c.Command.Name);
+                        Logger.Info("The command '{0}' has been added into this server!", c.Command.Name);
                 }
                 else
                 {
                     workingDict[c.Command.Name] = c.Command;
-                    if (Logger.IsInfoEnabled)
-                        Logger.InfoFormat("The command '{0}' has been updated!", c.Command.Name);
+                        Logger.Info("The command '{0}' has been updated!", c.Command.Name);
                 }
 
                 updatedCommands++;
@@ -290,10 +281,7 @@ namespace CSuperSocket.SocketBase
 
         void CommandLoaderOnError(object sender, ErrorEventArgs e)
         {
-            if (!Logger.IsErrorEnabled)
-                return;
-
-            Logger.Error(e.Exception);
+            Logger.Error(e.Exception.ToString());
         }
 
         /// <summary>
@@ -420,7 +408,6 @@ namespace CSuperSocket.SocketBase
 
                 if (ReceiveFilterFactory == null)
                 {
-                    if (Logger.IsErrorEnabled)
                         Logger.Error("receiveFilterFactory is required!");
 
                     return false;
@@ -450,7 +437,6 @@ namespace CSuperSocket.SocketBase
             }
             catch (Exception e)
             {
-                if (Logger.IsErrorEnabled)
                     Logger.Error("Failed to create ServerSummary instance!", e);
 
                 return false;
@@ -488,11 +474,11 @@ namespace CSuperSocket.SocketBase
         /// <param name="connectionFilters">The connection filters.</param>
         /// <param name="commandLoaders">The command loaders.</param>
         /// <returns></returns>
-        public bool Setup(IServerConfig config, ISocketServerFactory socketServerFactory = null, IReceiveFilterFactory<TRequestInfo> receiveFilterFactory = null, ILogFactory logFactory = null, IEnumerable<IConnectionFilter> connectionFilters = null, IEnumerable<ICommandLoader<ICommand<TAppSession, TRequestInfo>>> commandLoaders = null)
+        public bool Setup(IServerConfig config, ISocketServerFactory socketServerFactory = null, IReceiveFilterFactory<TRequestInfo> receiveFilterFactory = null, IEnumerable<IConnectionFilter> connectionFilters = null, IEnumerable<ICommandLoader<ICommand<TAppSession, TRequestInfo>>> commandLoaders = null)
         {
-            return Setup(new RootConfig(), config, socketServerFactory, receiveFilterFactory, logFactory, connectionFilters, commandLoaders);
+            return Setup(new RootConfig(), config, socketServerFactory, receiveFilterFactory, connectionFilters, commandLoaders);
         }
-
+       
         /// <summary>
         /// Setups the specified root config, this method used for programming setup
         /// </summary>
@@ -504,14 +490,12 @@ namespace CSuperSocket.SocketBase
         /// <param name="connectionFilters">The connection filters.</param>
         /// <param name="commandLoaders">The command loaders.</param>
         /// <returns></returns>
-        public bool Setup(IRootConfig rootConfig, IServerConfig config, ISocketServerFactory socketServerFactory = null, IReceiveFilterFactory<TRequestInfo> receiveFilterFactory = null, ILogFactory logFactory = null, IEnumerable<IConnectionFilter> connectionFilters = null, IEnumerable<ICommandLoader<ICommand<TAppSession, TRequestInfo>>> commandLoaders = null)
+        public bool Setup(IRootConfig rootConfig, IServerConfig config, ISocketServerFactory socketServerFactory = null, IReceiveFilterFactory<TRequestInfo> receiveFilterFactory = null, IEnumerable<IConnectionFilter> connectionFilters = null, IEnumerable<ICommandLoader<ICommand<TAppSession, TRequestInfo>>> commandLoaders = null)
         {
             TrySetInitializedState();
 
             SetupBasic(rootConfig, config, socketServerFactory);
 
-            if (!SetupLogFactory(logFactory))
-                return false;
 
             Logger = CreateLogger(this.Name);
 
@@ -542,7 +526,7 @@ namespace CSuperSocket.SocketBase
         /// <param name="connectionFilters">The connection filters.</param>
         /// <param name="commandLoaders">The command loaders.</param>
         /// <returns>return setup result</returns>
-        public bool Setup(string ip, int port, ISocketServerFactory socketServerFactory = null, IReceiveFilterFactory<TRequestInfo> receiveFilterFactory = null, ILogFactory logFactory = null, IEnumerable<IConnectionFilter> connectionFilters = null, IEnumerable<ICommandLoader<ICommand<TAppSession, TRequestInfo>>> commandLoaders = null)
+        public bool Setup(string ip, int port, ISocketServerFactory socketServerFactory = null, IReceiveFilterFactory<TRequestInfo> receiveFilterFactory = null, IEnumerable<IConnectionFilter> connectionFilters = null, IEnumerable<ICommandLoader<ICommand<TAppSession, TRequestInfo>>> commandLoaders = null)
         {
             return Setup(new ServerConfig
             {
@@ -551,7 +535,6 @@ namespace CSuperSocket.SocketBase
             },
                           socketServerFactory,
                           receiveFilterFactory,
-                          logFactory,
                           connectionFilters,
                           commandLoaders);
         }
@@ -579,8 +562,8 @@ namespace CSuperSocket.SocketBase
 
             SetupBasic(rootConfig, config, GetSingleProviderInstance<ISocketServerFactory>(factories, ProviderKey.SocketServerFactory));
 
-            if (!SetupLogFactory(GetSingleProviderInstance<ILogFactory>(factories, ProviderKey.LogFactory)))
-                return false;
+          //  if (!SetupLogFactory(GetSingleProviderInstance<ILogFactory>(factories, ProviderKey.LogFactory)))
+            //    return false;
 
             Logger = CreateLogger(this.Name);
 
@@ -593,7 +576,7 @@ namespace CSuperSocket.SocketBase
 
                         if (!ret)
                         {
-                            Logger.ErrorFormat("Failed to initialize the connection filter: {0}.", f.Name);
+                            Logger.Error("Failed to initialize the connection filter: {0}.", f.Name);
                         }
 
                         return ret;
@@ -679,20 +662,7 @@ namespace CSuperSocket.SocketBase
             return providers;
         }
 
-        private bool SetupLogFactory(ILogFactory logFactory)
-        {
-            if (logFactory != null)
-            {
-                LogFactory = logFactory;
-                return true;
-            }
-
-            //Log4NetLogFactory is default log factory
-            if (LogFactory == null)
-                LogFactory = new Log4NetLogFactory();
-           
-            return true;
-        }
+      
 
         /// <summary>
         /// Setups the command loaders.
@@ -710,9 +680,9 @@ namespace CSuperSocket.SocketBase
         /// </summary>
         /// <param name="loggerName">Name of the logger.</param>
         /// <returns></returns>
-        protected virtual ILog CreateLogger(string loggerName)
+        protected virtual ILogger CreateLogger(string loggerName)
         {
-            return LogFactory.GetLog(loggerName);
+            return LoggerManager.GetLogger(loggerName);
         }
 
         /// <summary>
@@ -727,8 +697,7 @@ namespace CSuperSocket.SocketBase
                 SslProtocols configProtocol;
                 if (!config.Security.TryParseEnum<SslProtocols>(true, out configProtocol))
                 {
-                    if (Logger.IsErrorEnabled)
-                        Logger.ErrorFormat("Failed to parse '{0}' to SslProtocol!", config.Security);
+                        Logger.Error("Failed to parse '{0}' to SslProtocol!", config.Security);
 
                     return false;
                 }
@@ -750,7 +719,6 @@ namespace CSuperSocket.SocketBase
                 }
                 else if (BasicSecurity != SslProtocols.None)
                 {
-                    if (Logger.IsErrorEnabled)
                         Logger.Error("Certificate is required in this security mode!");
 
                     return false;
@@ -759,7 +727,6 @@ namespace CSuperSocket.SocketBase
             }
             catch (Exception e)
             {
-                if (Logger.IsErrorEnabled)
                     Logger.Error("Failed to initialize certificate!", e);
 
                 return false;
@@ -777,14 +744,14 @@ namespace CSuperSocket.SocketBase
         {
             if (certificate == null)
             {
-                if (BasicSecurity != SslProtocols.None && Logger.IsErrorEnabled)
+                if (BasicSecurity != SslProtocols.None)
                     Logger.Error("There is no certificate configured!");
                 return null;
             }
 
             if (string.IsNullOrEmpty(certificate.FilePath) && string.IsNullOrEmpty(certificate.Thumbprint))
             {
-                if (BasicSecurity != SslProtocols.None && Logger.IsErrorEnabled)
+                if (BasicSecurity != SslProtocols.None)
                     Logger.Error("You should define certificate node and either attribute 'filePath' or 'thumbprint' is required!");
 
                 return null;
@@ -825,8 +792,7 @@ namespace CSuperSocket.SocketBase
             }
             catch (Exception e)
             {
-                if (Logger.IsErrorEnabled)
-                    Logger.Error(e);
+                    Logger.Error(e.ToString());
 
                 return false;
             }
@@ -867,7 +833,6 @@ namespace CSuperSocket.SocketBase
                     //Port is not configured, but ip is configured
                     if (!string.IsNullOrEmpty(config.Ip))
                     {
-                        if (Logger.IsErrorEnabled)
                             Logger.Error("Port is required in config!");
 
                         return false;
@@ -881,7 +846,6 @@ namespace CSuperSocket.SocketBase
                     //We don't allow this case
                     if (listeners.Any())
                     {
-                        if (Logger.IsErrorEnabled)
                             Logger.Error("If you configured Ip and Port in server node, you cannot defined listener in listeners node any more!");
 
                         return false;
@@ -897,15 +861,13 @@ namespace CSuperSocket.SocketBase
                         }
                         else if (!l.Security.TryParseEnum<SslProtocols>(true, out configProtocol))
                         {
-                            if (Logger.IsErrorEnabled)
-                                Logger.ErrorFormat("Failed to parse '{0}' to SslProtocol!", config.Security);
+                                Logger.Error("Failed to parse '{0}' to SslProtocol!", config.Security);
 
                             return false;
                         }
 
                         if (configProtocol != SslProtocols.None && (Certificate == null))
                         {
-                            if (Logger.IsErrorEnabled)
                                 Logger.Error("There is no certificate loaded, but there is a secure listener defined!");
                             return false;
                         }
@@ -921,7 +883,6 @@ namespace CSuperSocket.SocketBase
 
                 if (!listeners.Any())
                 {
-                    if (Logger.IsErrorEnabled)
                         Logger.Error("No listener defined!");
 
                     return false;
@@ -933,8 +894,7 @@ namespace CSuperSocket.SocketBase
             }
             catch (Exception e)
             {
-                if (Logger.IsErrorEnabled)
-                    Logger.Error(e);
+                    Logger.Error(e.ToString());
 
                 return false;
             }
@@ -976,8 +936,7 @@ namespace CSuperSocket.SocketBase
                 if (origStateCode < ServerStateConst.NotStarted)
                     throw new Exception("You cannot start a server instance which has not been setup yet.");
 
-                if (Logger.IsErrorEnabled)
-                    Logger.ErrorFormat("This server instance is in the state {0}, you cannot start it now.", (ServerState)origStateCode);
+                    Logger.Error("This server instance is in the state {0}, you cannot start it now.", (ServerState)origStateCode);
 
                 return false;
             }
@@ -1005,14 +964,12 @@ namespace CSuperSocket.SocketBase
             }
             catch (Exception e)
             {
-                if (Logger.IsErrorEnabled)
-                {
+            
                     Logger.Error("One exception wa thrown in the method 'OnStartup()'.", e);
-                }
+               
             }
             finally
             {
-                if (Logger.IsInfoEnabled)
                     Logger.Info(string.Format("The server instance {0} has been started!", Name));
             }
 
@@ -1064,7 +1021,6 @@ namespace CSuperSocket.SocketBase
             m_ServerStatus[StatusInfoKeys.IsRunning] = false;
             m_ServerStatus[StatusInfoKeys.StartedTime] = null;
 
-            if (Logger.IsInfoEnabled)
                 Logger.Info(string.Format("The server instance {0} has been stopped!", Name));
         }
 
@@ -1164,8 +1120,9 @@ namespace CSuperSocket.SocketBase
                             if (commandContext.Cancel)
                             {
                                 cancelled = true;
-                                if (Logger.IsInfoEnabled)
-                                    Logger.Info(session, string.Format("The executing of the command {0} was cancelled by the command filter {1}.", command.Name, filter.GetType().ToString()));
+
+                                Logger.Info(string.Format("The executing of the command {0} was cancelled by the command filter {1}.", command.Name, filter.GetType().ToString()));
+                                //    Logger.Info(session, string.Format("The executing of the command {0} was cancelled by the command filter {1}.", command.Name, filter.GetType().ToString()));
                                 break;
                             }
                         }
@@ -1205,8 +1162,8 @@ namespace CSuperSocket.SocketBase
                     {
                         session.PrevCommand = requestInfo.Key;
 
-                        if (Config.LogCommand && Logger.IsInfoEnabled)
-                            Logger.Info(session, string.Format("Command - {0}", requestInfo.Key));
+                        if (Config.LogCommand)
+                            Logger.Info(string.Format("{1}-Command - {0}", requestInfo.Key, session.SessionID));
                     }
                 }
                 else
@@ -1232,7 +1189,7 @@ namespace CSuperSocket.SocketBase
                 session.PrevCommand = requestInfo.Key;
                 session.LastActiveTime = DateTime.Now;
 
-                if (Config.LogCommand && Logger.IsInfoEnabled)
+                if (Config.LogCommand)
                     Logger.Info(session, string.Format("Command - {0}", requestInfo.Key));
             }
 
@@ -1285,8 +1242,7 @@ namespace CSuperSocket.SocketBase
                 var currentFilter = m_ConnectionFilters[i];
                 if (!currentFilter.AllowConnect(remoteAddress))
                 {
-                    if (Logger.IsInfoEnabled)
-                        Logger.InfoFormat("A connection from {0} has been refused by filter {1}!", remoteAddress, currentFilter.Name);
+                        Logger.Info("A connection from {0} has been refused by filter {1}!", remoteAddress, currentFilter.Name);
                     return false;
                 }
             }
@@ -1335,7 +1291,7 @@ namespace CSuperSocket.SocketBase
 
             appSession.SocketSession.Closed += OnSocketSessionClosed;
 
-            if (Config.LogBasicSessionActivity && Logger.IsInfoEnabled)
+            if (Config.LogBasicSessionActivity)
                 Logger.Info(session, "A new session connected!");
 
             OnNewSessionConnected(appSession);
@@ -1390,7 +1346,7 @@ namespace CSuperSocket.SocketBase
             }
             catch (Exception e)
             {
-                Logger.Error(e);
+                Logger.Error(e.ToString());
             }
         }
 
@@ -1412,8 +1368,11 @@ namespace CSuperSocket.SocketBase
         private void OnSocketSessionClosed(ISocketSession session, CloseReason reason)
         {
             //Even if LogBasicSessionActivity is false, we also log the unexpected closing because the close reason probably be useful
-            if (Logger.IsInfoEnabled && (Config.LogBasicSessionActivity || (reason != CloseReason.ServerClosing && reason != CloseReason.ClientClosing && reason != CloseReason.ServerShutdown && reason != CloseReason.SocketError)))
-                Logger.Info(session, string.Format("This session was closed for {0}!", reason));
+            if ((Config.LogBasicSessionActivity || (reason != CloseReason.ServerClosing && reason != CloseReason.ClientClosing && reason != CloseReason.ServerShutdown && reason != CloseReason.SocketError)))
+            {
+                var infoStr=string.Format("session={1}=>This session was closed for {0}!", reason,session.SessionID);
+                Logger.Info(infoStr);
+            }
 
             var appSession = session.AppSession as TAppSession;
             appSession.Connected = false;
@@ -1456,7 +1415,7 @@ namespace CSuperSocket.SocketBase
             }
             catch (Exception e)
             {
-                Logger.Error(e);
+                Logger.Error(e.ToString());
             }
         }
 
@@ -1588,7 +1547,7 @@ namespace CSuperSocket.SocketBase
         StatusInfoCollection IStatusInfoSource.CollectServerStatus(StatusInfoCollection bootstrapStatus)
         {
             UpdateServerStatus(m_ServerStatus);
-            this.AsyncRun(() => OnServerStatusCollected(bootstrapStatus, m_ServerStatus), e => Logger.Error(e));
+            this.AsyncRun(() => OnServerStatusCollected(bootstrapStatus, m_ServerStatus), e => Logger.Error(e.ToString()));
             return m_ServerStatus;
         }
 
@@ -1660,7 +1619,7 @@ namespace CSuperSocket.SocketBase
             {
                 if (rootConfig.Isolation == IsolationMode.None)
                 {
-                    Logger.WarnFormat("The default culture '{0}' cannot be set, because you cannot set default culture for one server instance if the Isolation is None!");
+                    Logger.Warn("The default culture '{0}' cannot be set, because you cannot set default culture for one server instance if the Isolation is None!");
                     return;
                 }
             }

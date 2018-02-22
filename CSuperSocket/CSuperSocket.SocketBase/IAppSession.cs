@@ -1,6 +1,8 @@
-﻿using CSuperSocket.SocketBase.Config;
-using CSuperSocket.SocketBase.Logging;
+﻿
+using CSuperSocket.SocketBase.Config;
+
 using CSuperSocket.SocketBase.Protocol;
+using Dynamic.Core.Log;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -94,7 +96,7 @@ namespace CSuperSocket.SocketBase
         /// <summary>
         /// Gets the logger assosiated with this session.
         /// </summary>
-        ILog Logger { get; }
+        ILogger Logger { get; }
 
         /// <summary>
         /// Processes the request.

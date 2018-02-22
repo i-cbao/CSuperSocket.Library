@@ -1,6 +1,7 @@
 ﻿using CSuperSocket.SocketBase.Config;
-using CSuperSocket.SocketBase.Logging;
+
 using CSuperSocket.SocketBase.Protocol;
+using Dynamic.Core.Log;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -121,7 +122,7 @@ namespace CSuperSocket.SocketBase
         /// <summary>
         /// Gets the logger.
         /// </summary>
-        public ILog Logger
+        public ILogger Logger
         {
             get { return AppServer.Logger; }
         }
@@ -235,7 +236,7 @@ namespace CSuperSocket.SocketBase
         /// <param name="e">The exception.</param>
         protected virtual void HandleException(Exception e)
         {
-            Logger.Error(this, e);
+            Logger.Error("session={0}=>{1}",this.SessionID, e.ToString());
             this.Close(CloseReason.ApplicationError);
         }
 
@@ -537,7 +538,6 @@ namespace CSuperSocket.SocketBase
 
             if (currentRequestLength >= maxRequestLength)
             {
-                if (Logger.IsErrorEnabled)
                     Logger.Error(this, string.Format("Max request length: {0}, current processed length: {1}", maxRequestLength, currentRequestLength));
 
                 Close(CloseReason.ProtocolError);

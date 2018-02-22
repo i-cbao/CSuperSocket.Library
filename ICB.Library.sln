@@ -49,6 +49,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{1971E05F
 		bin\CSuperSocket\CSuperSocket.All.2.1.2.nupkg = bin\CSuperSocket\CSuperSocket.All.2.1.2.nupkg
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpServerDemo", "TcpServerDemo\TcpServerDemo.csproj", "{30D51B74-C0CC-4812-BB7D-B62739DA5D26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,10 @@ Global
 		{97B4A2C4-14DD-465C-BB0C-78836E1859CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97B4A2C4-14DD-465C-BB0C-78836E1859CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97B4A2C4-14DD-465C-BB0C-78836E1859CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D51B74-C0CC-4812-BB7D-B62739DA5D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D51B74-C0CC-4812-BB7D-B62739DA5D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D51B74-C0CC-4812-BB7D-B62739DA5D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D51B74-C0CC-4812-BB7D-B62739DA5D26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,6 +130,7 @@ Global
 		{97B4A2C4-14DD-465C-BB0C-78836E1859CA} = {1BF724C4-04FF-44BB-A876-B4E123CCD4E5}
 		{11D9A622-C759-4417-9815-6177EEC17B5D} = {256BD66F-6386-477C-9B1E-95C60A94325C}
 		{1971E05F-4D6B-4F9A-A1DB-8AE3102B122B} = {4EA75670-2928-42EC-B9B9-2C82B45B62E5}
+		{30D51B74-C0CC-4812-BB7D-B62739DA5D26} = {4EA75670-2928-42EC-B9B9-2C82B45B62E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8684CB3-1BCD-49D5-9B62-88464D9E1F61}

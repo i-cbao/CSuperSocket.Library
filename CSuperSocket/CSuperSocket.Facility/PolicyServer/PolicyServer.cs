@@ -50,7 +50,7 @@ namespace CSuperSocket.Facility.PolicyServer
 
             if (string.IsNullOrEmpty(m_PolicyFile))
             {
-                if (Logger.IsErrorEnabled)
+                
                     Logger.Error("Configuration option policyFile is required!");
                 return false;
             }
@@ -60,7 +60,7 @@ namespace CSuperSocket.Facility.PolicyServer
 
             if (!File.Exists(m_PolicyFile))
             {
-                if (Logger.IsErrorEnabled)
+                
                     Logger.Error("The specified policyFile doesn't exist! " + m_PolicyFile);
                 return false;
             }

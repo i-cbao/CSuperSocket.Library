@@ -1,8 +1,8 @@
 ﻿using CSuperSocket.Common;
 using CSuperSocket.SocketBase;
 using CSuperSocket.SocketBase.Config;
-using CSuperSocket.SocketBase.Logging;
 using CSuperSocket.SocketEngine.AsyncSocket;
+using Dynamic.Core.Log;
 using System;
 using System.IO;
 using System.Net.Security;
@@ -348,7 +348,7 @@ namespace CSuperSocket.SocketEngine
 
         public SocketAsyncEventArgsProxy SocketAsyncProxy { get; private set; }
 
-        ILog ILoggerProvider.Logger
+        ILogger ILoggerProvider.Logger
         {
             get { return AppSession.Logger; }
         }

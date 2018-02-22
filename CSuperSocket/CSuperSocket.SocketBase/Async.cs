@@ -59,13 +59,12 @@ namespace CSuperSocket.SocketBase
                     exceptionHandler(t.Exception);
                 else
                 {
-                    if (logProvider.Logger.IsErrorEnabled)
-                    {
+                  
                         for (var i = 0; i < t.Exception.InnerExceptions.Count; i++)
                         {
-                            logProvider.Logger.Error(t.Exception.InnerExceptions[i]);
+                            logProvider.Logger.Error(t.Exception.InnerExceptions[i].ToString());
                         }
-                    }
+                  
                 }
             }, TaskContinuationOptions.OnlyOnFaulted);
         }
@@ -125,12 +124,11 @@ namespace CSuperSocket.SocketBase
                     exceptionHandler(t.Exception);
                 else
                 {
-                    if (logProvider.Logger.IsErrorEnabled)
+
+
+                    for (var i = 0; i < t.Exception.InnerExceptions.Count; i++)
                     {
-                        for (var i = 0; i < t.Exception.InnerExceptions.Count; i++)
-                        {
-                            logProvider.Logger.Error(t.Exception.InnerExceptions[i]);
-                        }
+                        logProvider.Logger.Error(t.Exception.InnerExceptions[i].ToString());
                     }
                 }
             }, TaskContinuationOptions.OnlyOnFaulted);

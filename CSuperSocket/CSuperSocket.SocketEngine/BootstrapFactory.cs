@@ -4,6 +4,7 @@ using CSuperSocket.SocketEngine.Configuration;
 using System;
 using System.Linq;
 using System.Threading;
+using CSuperSocket.SocketEngine.Extions;
 #if !NETSTANDARD2_0
 using System.Configuration;
 #else
@@ -94,7 +95,17 @@ namespace CSuperSocket.SocketEngine
             return CreateBootstrapFromConfigFile(configFile, configSectionName);
 #endif
         }
-      
+
+        public static IBootstrap CreateBootstrapFromServerCfg(SimpleSocketConfig simpleCfg)
+        {
+            var serverCfg = simpleCfg.ConvertSocketServiceCfg();
+            IBootstrap bootstrap;
+            var configSource = new ConfigurationSource(serverCfg);
+            if (configSource == null)
+                throw new InvalidOperationException("Invalid 'CSuperSocket' or 'socketServer' configuration section.");
+            bootstrap = CreateBootstrap(configSource);
+            return bootstrap;
+        }
         public static IBootstrap CreateBootstrapFromServerCfg(SocketServiceConfig serverCfg)
         {
             IBootstrap bootstrap;

@@ -89,8 +89,8 @@ namespace CSuperSocket.SocketEngine
             if (!m_ReadWritePool.TryPop(out socketEventArgsProxy))
             {
                 AppServer.AsyncRun(client.SafeClose);
-                if (AppServer.Logger.IsErrorEnabled)
-                    AppServer.Logger.ErrorFormat("Max connection number {0} was reached!", AppServer.Config.MaxConnectionNumber);
+                
+                    AppServer.Logger.Error("Max connection number {0} was reached!", AppServer.Config.MaxConnectionNumber);
 
                 return null;
             }

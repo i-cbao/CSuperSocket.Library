@@ -694,8 +694,8 @@ namespace CSuperSocket.SocketEngine
 
             var message = socketErrorCode > 0 ? string.Format(m_GeneralSocketErrorMessage, socketErrorCode) : m_GeneralErrorMessage;
 
-            AppSession.Logger.Error(this
-                , message + Environment.NewLine + string.Format(m_CallerInformation, caller, callerFilePath, callerLineNumber)
+            AppSession.Logger.Error(this.SessionID+"=>"+
+                 message + Environment.NewLine + string.Format(m_CallerInformation, caller, callerFilePath, callerLineNumber)
                 , exception);
         }
 
@@ -715,8 +715,8 @@ namespace CSuperSocket.SocketEngine
             if (IsIgnorableException(exception, out socketErrorCode))
                 return;
 
-            AppSession.Logger.Error(this
-                , message + Environment.NewLine + string.Format(m_CallerInformation, caller, callerFilePath, callerLineNumber)
+            AppSession.Logger.Error(this.SessionID + "=>" +
+                  message + Environment.NewLine + string.Format(m_CallerInformation, caller, callerFilePath, callerLineNumber)
                 , exception);
         }
 
@@ -736,8 +736,8 @@ namespace CSuperSocket.SocketEngine
                     return;
             }
 
-            AppSession.Logger.Error(this
-                , string.Format(m_GeneralSocketErrorMessage, socketErrorCode) + Environment.NewLine + string.Format(m_CallerInformation, caller, callerFilePath, callerLineNumber)
+            AppSession.Logger.Error(this.SessionID + "=>" +
+                 string.Format(m_GeneralSocketErrorMessage, socketErrorCode) + Environment.NewLine + string.Format(m_CallerInformation, caller, callerFilePath, callerLineNumber)
                 , new SocketException(socketErrorCode));
         }
     }

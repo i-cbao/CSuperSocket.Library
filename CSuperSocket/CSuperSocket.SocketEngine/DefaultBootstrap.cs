@@ -1,8 +1,8 @@
 ﻿using CSuperSocket.Common;
 using CSuperSocket.SocketBase;
 using CSuperSocket.SocketBase.Config;
-using CSuperSocket.SocketBase.Logging;
 using CSuperSocket.SocketBase.Metadata;
+using Dynamic.Core.Log;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,21 +39,18 @@ namespace CSuperSocket.SocketEngine
         /// <summary>
         /// Global log
         /// </summary>
-        private ILog m_GlobalLog;
+        private ILogger m_GlobalLog;
 
         /// <summary>
         /// Gets the bootstrap logger.
         /// </summary>
-        ILog ILoggerProvider.Logger
+        ILogger ILoggerProvider.Logger
         {
             get { return m_GlobalLog; }
         }
 
-        /// <summary>
-        /// Gets the log factory.
-        /// </summary>
-        protected ILogFactory LogFactory { get; private set; }
-
+    
+      
         /// <summary>
         /// Gets all the app servers running in this bootstrap
         /// </summary>
@@ -113,18 +110,7 @@ namespace CSuperSocket.SocketEngine
         /// </summary>
         /// <param name="appServers">The app servers.</param>
         public DefaultBootstrap(IEnumerable<IWorkItem> appServers)
-            : this(new RootConfig(), appServers, new Log4NetLogFactory())
-        {
-
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DefaultBootstrap"/> class.
-        /// </summary>
-        /// <param name="rootConfig">The root config.</param>
-        /// <param name="appServers">The app servers.</param>
-        public DefaultBootstrap(IRootConfig rootConfig, IEnumerable<IWorkItem> appServers)
-            : this(rootConfig, appServers, new Log4NetLogFactory())
+            : this(new RootConfig(), appServers)
         {
 
         }
@@ -135,7 +121,7 @@ namespace CSuperSocket.SocketEngine
         /// <param name="rootConfig">The root config.</param>
         /// <param name="appServers">The app servers.</param>
         /// <param name="logFactory">The log factory.</param>
-        public DefaultBootstrap(IRootConfig rootConfig, IEnumerable<IWorkItem> appServers, ILogFactory logFactory)
+        public DefaultBootstrap(IRootConfig rootConfig, IEnumerable<IWorkItem> appServers)
         {
             if (rootConfig == null)
                 throw new ArgumentNullException("rootConfig");
@@ -146,8 +132,6 @@ namespace CSuperSocket.SocketEngine
             if (!appServers.Any())
                 throw new ArgumentException("appServers must have one item at least", "appServers");
 
-            if (logFactory == null)
-                throw new ArgumentNullException("logFactory");
 
             m_RootConfig = rootConfig;
 
@@ -155,19 +139,18 @@ namespace CSuperSocket.SocketEngine
 
             m_AppServers = appServers.ToList();
 
-            m_GlobalLog = logFactory.GetLog(this.GetType().Name);
+            m_GlobalLog = LoggerManager.GetLogger(this.GetType().Name);
 
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
             if (!rootConfig.DisablePerformanceDataCollector)
             {
-                m_PerfMonitor = new PerformanceMonitor(rootConfig, m_AppServers, null, logFactory);
+                m_PerfMonitor = new PerformanceMonitor(rootConfig, m_AppServers, null);
 
-                if (m_GlobalLog.IsDebugEnabled)
+               
                     m_GlobalLog.Debug("The PerformanceMonitor has been initialized!");
             }
 
-            if (m_GlobalLog.IsDebugEnabled)
                 m_GlobalLog.Debug("The Bootstrap has been initialized!");
 
             m_Initialized = true;
@@ -236,13 +219,10 @@ namespace CSuperSocket.SocketEngine
             {
                 //Share AppDomain AppServers also share same socket server factory and log factory instances
                 factoryInfo.SocketServerFactory.ExportFactory.EnsureInstance();
-                factoryInfo.LogFactory.ExportFactory.EnsureInstance();
             }
             catch (Exception e)
             {
-                if (m_GlobalLog.IsErrorEnabled)
-                    m_GlobalLog.Error(e);
-
+                m_GlobalLog.Error(e.ToString());
                 return false;
             }
 
@@ -255,9 +235,9 @@ namespace CSuperSocket.SocketEngine
         /// <param name="config">The config.</param>
         /// <param name="logFactory">The log factory.</param>
         /// <returns></returns>
-        internal virtual WorkItemFactoryInfoLoader GetWorkItemFactoryInfoLoader(IConfigurationSource config, ILogFactory logFactory)
+        internal virtual WorkItemFactoryInfoLoader GetWorkItemFactoryInfoLoader(IConfigurationSource config)
         {
-            return new WorkItemFactoryInfoLoader(config, logFactory);
+            return new WorkItemFactoryInfoLoader(config);
         }
 
         /// <summary>
@@ -324,12 +304,10 @@ namespace CSuperSocket.SocketEngine
             {
                 appServer = CreateWorkItemInstance(factoryInfo.ServerType, factoryInfo.StatusInfoMetadata);
 
-                if (m_GlobalLog.IsDebugEnabled)
-                    m_GlobalLog.DebugFormat("The server instance {0} has been created!", factoryInfo.Config.Name);
+                    m_GlobalLog.Debug("The server instance {0} has been created!", factoryInfo.Config.Name);
             }
             catch (Exception e)
             {
-                if (m_GlobalLog.IsErrorEnabled)
                     m_GlobalLog.Error(string.Format("Failed to create server instance {0}!", factoryInfo.Config.Name), e);
                 return null;
             }
@@ -346,18 +324,16 @@ namespace CSuperSocket.SocketEngine
             {
                 setupResult = SetupWorkItemInstance(appServer, factoryInfo);
 
-                if (m_GlobalLog.IsDebugEnabled)
-                    m_GlobalLog.DebugFormat("The server instance {0} has been initialized!", appServer.Name);
+                    m_GlobalLog.Debug("The server instance {0} has been initialized!", appServer.Name);
             }
             catch (Exception e)
             {
-                m_GlobalLog.Error(e);
+                m_GlobalLog.Error(e.ToString());
                 setupResult = false;
             }
 
             if (!setupResult)
             {
-                if (m_GlobalLog.IsErrorEnabled)
                     m_GlobalLog.Error("Failed to setup server instance!");
 
                 return null;
@@ -373,26 +349,17 @@ namespace CSuperSocket.SocketEngine
         /// <param name="serverConfigResolver">The server config resolver.</param>
         /// <param name="logFactory">The log factory.</param>
         /// <returns></returns>
-        public virtual bool Initialize(Func<IServerConfig, IServerConfig> serverConfigResolver, ILogFactory logFactory)
+        public virtual bool Initialize(Func<IServerConfig, IServerConfig> serverConfigResolver)
         {
             if (m_Initialized)
                 throw new Exception("The server had been initialized already, you cannot initialize it again!");
 
-            if (logFactory != null && !string.IsNullOrEmpty(m_Config.LogFactory))
-            {
-                throw new ArgumentException("You cannot pass in a logFactory parameter, if you have configured a root log factory.", "logFactory");
-            }
-
             IEnumerable<WorkItemFactoryInfo> workItemFactories;
 
-            using (var factoryInfoLoader = GetWorkItemFactoryInfoLoader(m_Config, logFactory))
+            using (var factoryInfoLoader = GetWorkItemFactoryInfoLoader(m_Config))
             {
-                var bootstrapLogFactory = factoryInfoLoader.GetBootstrapLogFactory();
-
-                logFactory = bootstrapLogFactory.ExportFactory.CreateExport<ILogFactory>();
-
-                LogFactory = logFactory;
-                m_GlobalLog = logFactory.GetLog(this.GetType().Name);
+          
+                m_GlobalLog = LoggerManager.GetLogger(this.GetType().Name);
 
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
@@ -402,8 +369,7 @@ namespace CSuperSocket.SocketEngine
                 }
                 catch (Exception e)
                 {
-                    if (m_GlobalLog.IsErrorEnabled)
-                        m_GlobalLog.Error(e);
+                        m_GlobalLog.Error(e.ToString());
 
                     return false;
                 }
@@ -438,13 +404,11 @@ namespace CSuperSocket.SocketEngine
 
             if (!m_Config.DisablePerformanceDataCollector)
             {
-                m_PerfMonitor = new PerformanceMonitor(m_Config, m_AppServers, serverManager, logFactory);
+                m_PerfMonitor = new PerformanceMonitor(m_Config, m_AppServers, serverManager);
 
-                if (m_GlobalLog.IsDebugEnabled)
                     m_GlobalLog.Debug("The PerformanceMonitor has been initialized!");
             }
 
-            if (m_GlobalLog.IsDebugEnabled)
                 m_GlobalLog.Debug("The Bootstrap has been initialized!");
 
             try
@@ -455,7 +419,6 @@ namespace CSuperSocket.SocketEngine
             }
             catch (Exception e)
             {
-                if (m_GlobalLog.IsErrorEnabled)
                     m_GlobalLog.Error("Failed to register remoting access service!", e);
 
                 return false;
@@ -476,25 +439,9 @@ namespace CSuperSocket.SocketEngine
             m_GlobalLog.Error("The process crashed for an unhandled exception!", (Exception)e.ExceptionObject);
         }
 
-        /// <summary>
-        /// Initializes the bootstrap with the configuration and config resolver.
-        /// </summary>
-        /// <param name="serverConfigResolver">The server config resolver.</param>
-        /// <returns></returns>
-        public virtual bool Initialize(Func<IServerConfig, IServerConfig> serverConfigResolver)
-        {
-            return Initialize(serverConfigResolver, null);
-        }
+      
 
-        /// <summary>
-        /// Initializes the bootstrap with the configuration
-        /// </summary>
-        /// <param name="logFactory">The log factory.</param>
-        /// <returns></returns>
-        public virtual bool Initialize(ILogFactory logFactory)
-        {
-            return Initialize(c => c, logFactory);
-        }
+      
 
         /// <summary>
         /// Initializes the bootstrap with the configuration
@@ -513,7 +460,6 @@ namespace CSuperSocket.SocketEngine
         {
             if (!m_Initialized)
             {
-                if (m_GlobalLog.IsErrorEnabled)
                     m_GlobalLog.Error("You cannot invoke method Start() before initializing!");
 
                 return StartResult.Failed;
@@ -527,8 +473,7 @@ namespace CSuperSocket.SocketEngine
             {
                 if (!server.Start())
                 {
-                    if (m_GlobalLog.IsErrorEnabled)
-                        m_GlobalLog.InfoFormat("The server instance {0} has failed to be started!", server.Name);
+                        m_GlobalLog.Info("The server instance {0} has failed to be started!", server.Name);
                 }
                 else
                 {
@@ -536,8 +481,7 @@ namespace CSuperSocket.SocketEngine
 
                     if (Config.Isolation != IsolationMode.None)
                     {
-                        if (m_GlobalLog.IsInfoEnabled)
-                            m_GlobalLog.InfoFormat("The server instance {0} has been started!", server.Name);
+                            m_GlobalLog.Info("The server instance {0} has been started!", server.Name);
                     }
                 }
             }
@@ -556,8 +500,7 @@ namespace CSuperSocket.SocketEngine
             {
                 m_PerfMonitor.Start();
 
-                if (m_GlobalLog.IsDebugEnabled)
-                    m_GlobalLog.Debug("The PerformanceMonitor has been started!");
+                m_GlobalLog.Debug("The PerformanceMonitor has been started!");
             }
 
             return result;
@@ -583,8 +526,7 @@ namespace CSuperSocket.SocketEngine
 
                     if (Config.Isolation != IsolationMode.None)
                     {
-                        if (m_GlobalLog.IsInfoEnabled)
-                            m_GlobalLog.InfoFormat("The server instance {0} has been stopped!", server.Name);
+                            m_GlobalLog.Info("The server instance {0} has been stopped!", server.Name);
                     }
                 }
             }
@@ -593,7 +535,6 @@ namespace CSuperSocket.SocketEngine
             {
                 m_PerfMonitor.Stop();
 
-                if (m_GlobalLog.IsDebugEnabled)
                     m_GlobalLog.Debug("The PerformanceMonitor has been stoppped!");
             }
         }
@@ -655,11 +596,10 @@ namespace CSuperSocket.SocketEngine
                 m_PerfMonitor = null;
             }
 
-            m_PerfMonitor = new PerformanceMonitor(m_Config, m_AppServers, m_ServerManager, LogFactory);
+            m_PerfMonitor = new PerformanceMonitor(m_Config, m_AppServers, m_ServerManager);
             m_PerfMonitor.Start();
 
-            if (m_GlobalLog.IsDebugEnabled)
-                m_GlobalLog.Debug("The PerformanceMonitor has been reset for new server has been added!");
+            m_GlobalLog.Debug("The PerformanceMonitor has been reset for new server has been added!");
         }
     }
 }

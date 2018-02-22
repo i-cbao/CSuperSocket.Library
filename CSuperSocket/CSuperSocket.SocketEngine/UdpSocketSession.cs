@@ -73,7 +73,6 @@ namespace CSuperSocket.SocketEngine
             {
                 var log = AppSession.Logger;
 
-                if (log.IsErrorEnabled)
                     log.Error(new SocketException((int)e.SocketError));
 
                 CleanSocketAsyncEventArgs(e);

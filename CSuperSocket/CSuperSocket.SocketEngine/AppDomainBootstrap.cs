@@ -5,7 +5,6 @@ using CSuperSocket.SocketEngine.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CSuperSocket.SocketBase.Logging;
 #if !NETSTANDARD2_0
 using System.Configuration;
 using CSuperSocket.Common;
@@ -18,17 +17,12 @@ namespace CSuperSocket.SocketEngine
 {
     class AppDomainWorkItemFactoryInfoLoader : WorkItemFactoryInfoLoader
     {
-        public AppDomainWorkItemFactoryInfoLoader(SocketBase.Config.IConfigurationSource config, ILogFactory passedInLogFactory)
-            : base(config, passedInLogFactory)
-        {
-            InitliazeValidationAppDomain();
-        }
-
         public AppDomainWorkItemFactoryInfoLoader(SocketBase.Config.IConfigurationSource config)
             : base(config)
         {
             InitliazeValidationAppDomain();
         }
+
 
         private AppDomain m_ValidationAppDomain;
 
@@ -93,16 +87,12 @@ namespace CSuperSocket.SocketEngine
             return workItem.Setup(m_Bootstrap, factoryInfo.Config, factoryInfo.ProviderFactories.ToArray());
         }
 
-        internal override WorkItemFactoryInfoLoader GetWorkItemFactoryInfoLoader(SocketBase.Config.IConfigurationSource config, ILogFactory logFactory)
-        {
-            return new AppDomainWorkItemFactoryInfoLoader(config, logFactory);
-        }
     }
 
     /// <summary>
     /// AppDomainBootstrap
     /// </summary>
-    partial class AppDomainBootstrap : MarshalByRefObject, ILoggerProvider, IBootstrap, IDisposable
+    partial class AppDomainBootstrap : MarshalByRefObject, IBootstrap, IDisposable
     {
         private IBootstrap m_InnerBootstrap;
 
@@ -121,22 +111,7 @@ namespace CSuperSocket.SocketEngine
         {
             get { return m_InnerBootstrap.Config; }
         }
-
-        /// <summary>
-        /// Gets the bootstrap logger.
-        /// </summary>
-        ILog ILoggerProvider.Logger
-        {
-            get
-            {
-                var loggerProvider = m_InnerBootstrap as ILoggerProvider;
-
-                if (loggerProvider == null)
-                    return null;
-
-                return loggerProvider.Logger;
-            }
-        }
+ 
         /// <summary>
         /// Gets the startup config file.
         /// </summary>
@@ -205,16 +180,7 @@ namespace CSuperSocket.SocketEngine
             return m_InnerBootstrap.Initialize(serverConfigResolver);
         }
 
-        /// <summary>
-        /// Initializes the bootstrap with the configuration and config resolver.
-        /// </summary>
-        /// <param name="logFactory">The log factory.</param>
-        /// <returns></returns>
-        public bool Initialize(ILogFactory logFactory)
-        {
-            return m_InnerBootstrap.Initialize(logFactory);
-        }
-
+    
         /// <summary>
         /// Initializes the bootstrap with a listen endpoint replacement dictionary
         /// </summary>
@@ -225,20 +191,7 @@ namespace CSuperSocket.SocketEngine
             return m_InnerBootstrap.Initialize(listenEndPointReplacement);
         }
 
-        /// <summary>
-        /// Initializes the bootstrap with the configuration
-        /// </summary>
-        /// <param name="serverConfigResolver">The server config resolver.</param>
-        /// <param name="logFactory">The log factory.</param>
-        /// <returns></returns>
-        public bool Initialize(Func<IServerConfig, IServerConfig> serverConfigResolver, ILogFactory logFactory)
-        {
-            if (logFactory != null)
-                throw new Exception("You cannot pass in logFactory, if your isolation level is AppDomain!");
-
-            return m_InnerBootstrap.Initialize(serverConfigResolver, logFactory);
-        }
-
+  
         /// <summary>
         /// Starts this bootstrap.
         /// </summary>

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using Dynamic.Core.Log;
 
 namespace CSuperSocket.SocketBase
 {
@@ -66,20 +67,6 @@ namespace CSuperSocket.SocketBase
         bool Initialize(Func<IServerConfig, IServerConfig> serverConfigResolver);
 
 
-        /// <summary>
-        /// Initializes the bootstrap with the configuration
-        /// </summary>
-        /// <param name="logFactory">The log factory.</param>
-        /// <returns></returns>
-        bool Initialize(ILogFactory logFactory);
-
-        /// <summary>
-        /// Initializes the bootstrap with the configuration
-        /// </summary>
-        /// <param name="serverConfigResolver">The server config resolver.</param>
-        /// <param name="logFactory">The log factory.</param>
-        /// <returns></returns>
-        bool Initialize(Func<IServerConfig, IServerConfig> serverConfigResolver, ILogFactory logFactory);
 
         /// <summary>
         /// Starts this bootstrap.

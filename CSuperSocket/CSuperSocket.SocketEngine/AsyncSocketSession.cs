@@ -1,7 +1,8 @@
 ﻿using CSuperSocket.Common;
 using CSuperSocket.SocketBase;
-using CSuperSocket.SocketBase.Logging;
+
 using CSuperSocket.SocketEngine.AsyncSocket;
+using Dynamic.Core.Log;
 using System;
 using System.Linq;
 using System.Net.Sockets;
@@ -28,7 +29,7 @@ namespace CSuperSocket.SocketEngine
             m_IsReset = isReset;
         }
 
-        ILog ILoggerProvider.Logger
+        ILogger ILoggerProvider.Logger
         {
             get { return AppSession.Logger; }
         }
@@ -89,7 +90,7 @@ namespace CSuperSocket.SocketEngine
             if (count != e.BytesTransferred)
             {
                 queue.InternalTrim(e.BytesTransferred);
-                AppSession.Logger.InfoFormat("{0} of {1} were transferred, send the rest {2} bytes right now.", e.BytesTransferred, count, queue.Sum(q => q.Count));
+                AppSession.Logger.Info("{0} of {1} were transferred, send the rest {2} bytes right now.", e.BytesTransferred, count, queue.Sum(q => q.Count));
                 ClearPrevSendState(e);
                 SendAsync(queue);
                 return;

@@ -1,6 +1,6 @@
 ﻿using CSuperSocket.Common;
 using CSuperSocket.SocketBase;
-using CSuperSocket.SocketBase.Logging;
+using Dynamic.Core.Log;
 using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
@@ -49,7 +49,7 @@ namespace CSuperSocket.SocketEngine
         {
             IsStopped = false;
 
-            ILog log = AppServer.Logger;
+            ILogger log = AppServer.Logger;
 
             var config = AppServer.Config;
 
@@ -71,17 +71,16 @@ namespace CSuperSocket.SocketEngine
                 {
                     Listeners.Add(listener);
 
-                    if (log.IsDebugEnabled)
-                    {
-                        log.DebugFormat("Listener ({0}) was started", listener.EndPoint);
-                    }
+                
+              
+                        log.Debug("Listener ({0}) was started", listener.EndPoint);
+                  
                 }
                 else //If one listener failed to start, stop started listeners
                 {
-                    if (log.IsDebugEnabled)
-                    {
-                        log.DebugFormat("Listener ({0}) failed to start", listener.EndPoint);
-                    }
+                
+                        log.Debug("Listener ({0}) failed to start", listener.EndPoint);
+                
 
                     for (var j = 0; j < Listeners.Count; j++)
                     {
@@ -103,8 +102,6 @@ namespace CSuperSocket.SocketEngine
         {
             var logger = this.AppServer.Logger;
 
-            if (!logger.IsErrorEnabled)
-                return;
 
             logger.Error(string.Format("Listener ({0}) error: {1}", listener.EndPoint, e.Message), e);
         }
@@ -113,10 +110,10 @@ namespace CSuperSocket.SocketEngine
         {
             var listener = sender as ISocketListener;
 
-            ILog log = AppServer.Logger;
+            ILogger log = AppServer.Logger;
 
-            if (log.IsDebugEnabled)
-                log.DebugFormat("Listener ({0}) was stoppped", listener.EndPoint);
+          
+                log.Debug("Listener ({0}) was stoppped", listener.EndPoint);
         }
 
         protected abstract ISocketListener CreateListener(ListenerInfo listenerInfo);

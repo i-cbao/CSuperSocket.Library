@@ -77,7 +77,6 @@ namespace CSuperSocket.SocketBase
         /// <summary>
         /// Gets the log factory.
         /// </summary>
-        ILogFactory LogFactory { get; }
     }
 
     /// <summary>

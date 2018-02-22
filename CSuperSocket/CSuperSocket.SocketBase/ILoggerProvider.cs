@@ -1,4 +1,5 @@
-﻿using CSuperSocket.SocketBase.Logging;
+﻿
+using Dynamic.Core.Log;
 
 namespace CSuperSocket.SocketBase
 {
@@ -10,6 +11,6 @@ namespace CSuperSocket.SocketBase
         /// <summary>
         /// Gets the logger assosiated with this object.
         /// </summary>
-        ILog Logger { get; }
+        ILogger Logger { get; }
     }
 }
