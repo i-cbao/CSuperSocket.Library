@@ -6,10 +6,13 @@ using System;
 using System.Configuration;
 using System.Diagnostics;
 
+using System.Linq;
+
 namespace TcpServerDemo
 {
     class Program
     {
+        protected static  Service _server { get; set; }
         private static bool _setConsoleColor;
         static void Main(string[] args)
         {
@@ -18,7 +21,13 @@ namespace TcpServerDemo
             InitSocket();
           //  InitServer();
             Console.WriteLine("初始化成功!");
-            Console.ReadLine();
+            while (Console.ReadLine()!="exit")
+            {
+                foreach (var item in _server.GetAllSessions())
+                {
+                    Console.WriteLine(item.SessionID);
+                }
+            }
         }
         public static void InitServer()
         {
@@ -55,6 +64,7 @@ namespace TcpServerDemo
             Stopwatch startWatch = new Stopwatch();
             startWatch.Start();
             var bootstrap = BootstrapFactory.CreateBootstrapFromServerCfg(simpleCfg);
+            
             startWatch.Stop();
             Console.WriteLine("CSpuerTcp初始化工厂耗时：{0}ms", startWatch.ElapsedMilliseconds);
 
@@ -70,6 +80,7 @@ namespace TcpServerDemo
                 Console.ReadKey();
                 return;
             }
+            _server = bootstrap.AppServers.ToList().FirstOrDefault() as Service;
             Console.WriteLine("Starting...");
             var result = bootstrap.Start();
        

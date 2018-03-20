@@ -48,6 +48,7 @@ namespace CSuperSocket.SocketEngine
 
     class AsyncStreamSocketSession : SocketSession, IAsyncSocketSessionBase, INegotiateSocketSession
     {
+        ILogger _logger = LoggerManager.GetLogger("AsyncStreamSocketSession");
         private byte[] m_ReadBuffer;
         private int m_Offset;
         private int m_Length;
@@ -136,6 +137,7 @@ namespace CSuperSocket.SocketEngine
             }
             catch (Exception ex)
             {
+                _logger.Info(ex.ToString());
                 LogError("Protocol error", ex);
                 this.Close(CloseReason.ProtocolError);
                 return;
