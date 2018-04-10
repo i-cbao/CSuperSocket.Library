@@ -49,7 +49,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{1971E05F
 		bin\CSuperSocket\CSuperSocket.All.2.1.2.nupkg = bin\CSuperSocket\CSuperSocket.All.2.1.2.nupkg
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpServerDemo", "TcpServerDemo\TcpServerDemo.csproj", "{30D51B74-C0CC-4812-BB7D-B62739DA5D26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TcpServerDemo", "TcpServerDemo\TcpServerDemo.csproj", "{30D51B74-C0CC-4812-BB7D-B62739DA5D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic.Windows.SySServices", "Dynamic.Windows.SySServices\Dynamic.Windows.SySServices.csproj", "{6D221376-6364-4CB7-B58F-E4C690D2EF2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SystemTools", "SystemTools", "{76DC6362-1328-4D2B-B6B4-6A706E29A123}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +113,10 @@ Global
 		{30D51B74-C0CC-4812-BB7D-B62739DA5D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30D51B74-C0CC-4812-BB7D-B62739DA5D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30D51B74-C0CC-4812-BB7D-B62739DA5D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D221376-6364-4CB7-B58F-E4C690D2EF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D221376-6364-4CB7-B58F-E4C690D2EF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D221376-6364-4CB7-B58F-E4C690D2EF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D221376-6364-4CB7-B58F-E4C690D2EF2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +139,7 @@ Global
 		{11D9A622-C759-4417-9815-6177EEC17B5D} = {256BD66F-6386-477C-9B1E-95C60A94325C}
 		{1971E05F-4D6B-4F9A-A1DB-8AE3102B122B} = {4EA75670-2928-42EC-B9B9-2C82B45B62E5}
 		{30D51B74-C0CC-4812-BB7D-B62739DA5D26} = {4EA75670-2928-42EC-B9B9-2C82B45B62E5}
+		{6D221376-6364-4CB7-B58F-E4C690D2EF2B} = {76DC6362-1328-4D2B-B6B4-6A706E29A123}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8684CB3-1BCD-49D5-9B62-88464D9E1F61}
