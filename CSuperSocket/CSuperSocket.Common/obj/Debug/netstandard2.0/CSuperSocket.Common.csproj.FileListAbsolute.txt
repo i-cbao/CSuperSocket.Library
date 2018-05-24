@@ -32,3 +32,4 @@ D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Deb
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Debug\netstandard2.0\CSuperSocket.Common.AssemblyInfo.cs
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Debug\netstandard2.0\CSuperSocket.Common.dll
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Debug\netstandard2.0\CSuperSocket.Common.pdb
+D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Debug\netstandard2.0\CSuperSocket.Common.csprojResolveAssemblyReference.cache

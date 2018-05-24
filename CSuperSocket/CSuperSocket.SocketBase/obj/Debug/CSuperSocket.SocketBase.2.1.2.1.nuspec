@@ -13,7 +13,7 @@
     <dependencies>
       <group targetFramework=".NETStandard2.0">
         <dependency id="CSuperSocket.Common" version="2.1.2.1" exclude="Build,Analyzers" />
-        <dependency id="Dynamic.Core" version="2.1.3.4" exclude="Build,Analyzers" />
+        <dependency id="Dynamic.Core" version="2.1.4.5" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
