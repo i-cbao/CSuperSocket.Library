@@ -6,6 +6,9 @@ using System.Data;
 
 using Dynamic.Core.Config;
 using Dynamic.Core.ViewModel;
+using Dapper;
+using CDynamic.Dapper.Adapters;
+using System.Collections.Generic;
 
 namespace CDynamic.Dapper.Domain
 {
@@ -89,6 +92,7 @@ namespace CDynamic.Dapper.Domain
             }, dBConfig, level);
             return result ?? DResult.Error("事务执行失败");
         }
+      
 
         /// <summary> 更新数量 </summary>
         /// <param name="conn"></param>
@@ -102,6 +106,44 @@ namespace CDynamic.Dapper.Domain
             int count = 1, IDbConnection conn = null, IDbTransaction trans = null)
         {
             return (conn ?? Connection).Increment<T>(column, key, keyColumn, count, trans);
+        }
+        public  T QueryFirstOrDefault<T>(string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)
+        {
+            sql = Connection.FormatSql(sql);
+            return Connection.QueryFirstOrDefault(sql,param,transaction,commandTimeout, commandType);
+        }
+        public int BaseExecute(string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)
+        {
+            return Connection.Execute(sql,param,transaction, commandTimeout, commandType);
+        }
+        /// <summary>
+        /// 执行原生sql（多分表的时候，上面的语句缓存会丢失tablename）
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="isFormatSql">是否格式化sql，默认格式化</param>
+        /// <param name="param"></param>
+        /// <param name="transaction"></param>
+        /// <param name="buffered"></param>
+        /// <param name="commandTimeout"></param>
+        /// <param name="commandType"></param>
+        /// <returns></returns>
+        public IEnumerable<T> QueryOriCommand<T>(string sql, bool isFormatSql = true, object param = null, IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, CommandType? commandType = null)
+        {
+            if (isFormatSql)
+            {
+                sql = Connection.FormatSql(sql);
+            }
+            return Connection.Query<T>(sql, param, transaction, buffered, commandTimeout, commandType);
+        }
+        /// <summary>
+        /// 获取原始连接，建议最好不要直接用这个
+        /// </summary>
+        /// <returns></returns>
+        [Obsolete("获取原始连接，建议最好不要直接用这个,随时可能关闭")]
+        public IDbConnection GetConnection()
+        {
+            return Connection;
         }
     }
 }

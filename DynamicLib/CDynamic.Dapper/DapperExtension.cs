@@ -4,6 +4,7 @@ using CDynamic.Dapper.PostgreSql;
 using Dapper;
 using Dynamic.Core;
 using Dynamic.Core.Extensions;
+using Dynamic.Core.Log;
 using Dynamic.Core.Serialize;
 using System;
 using System.Collections.Concurrent;
@@ -24,6 +25,8 @@ namespace CDynamic.Dapper
     /// <summary> Dapper自定义扩展 </summary>
     public static partial class DapperExtension
     {
+       static  ILogger _logger = LoggerManager.GetLogger("DapperExtension_sql");
+
         #region 私有属性
         private static readonly ConcurrentDictionary<RuntimeTypeHandle, IEnumerable<PropertyInfo>> TypePropsCache =
            new ConcurrentDictionary<RuntimeTypeHandle, IEnumerable<PropertyInfo>>();
@@ -161,21 +164,26 @@ namespace CDynamic.Dapper
                 if (includes != null && !includes.Contains(prop.Key))
                     continue;
                 if (prop.Key.Equals(prop.Value, StringComparison.CurrentCultureIgnoreCase))
-                    sb.AppendFormat("{1}.[{0}],", prop.Key,tableName);
+                    sb.AppendFormat("[{1}].[{0}],", prop.Key,tableName);
                 else
-                    sb.AppendFormat("{2}.[{0}] AS [{1}],", prop.Value, prop.Key,tableName);
+                    sb.AppendFormat("[{2}].[{0}] AS [{1}],", prop.Value, prop.Key,tableName);
             }
             return sb.ToString().TrimEnd(',');
         }
-
+        ///增加tablename，大型分表需要导入分表
         /// <summary> 生成insert语句 </summary>
         /// <returns></returns>
-        public static string InsertSql(this Type modelType, string[] excepts = null)
+        public static string InsertSql(this Type modelType, string[] excepts = null,string tableName=null)
         {
-            if (InsertCache.TryGetValue(modelType.TypeHandle, out var sql))
-                return sql;
+            string sql;
+            if (string.IsNullOrEmpty(tableName))
+            {
+                if (InsertCache.TryGetValue(modelType.TypeHandle, out sql))
+                    return sql;
 
-            var tableName = modelType.PropName();
+                tableName = modelType.PropName();
+            }
+          
             var sb = new StringBuilder();
             sb.Append($"INSERT INTO [{tableName}]");
 
@@ -290,10 +298,11 @@ namespace CDynamic.Dapper
         /// <param name="trans"></param>
         /// <param name="commandTimeout"></param>
         /// <returns></returns>
-        public static int Insert<T>(this IDbConnection conn, T model, string[] excepts = null, IDbTransaction trans = null, int? commandTimeout = null)
+        public static int Insert<T>(this IDbConnection conn, T model, string[] excepts = null,string tableName= null, IDbTransaction trans = null, int? commandTimeout = null)
         {
             var type = typeof(T);
-            var sql = type.InsertSql(excepts);
+            var sql = type.InsertSql(excepts,tableName);
+            _logger.Debug(sql);
             sql = conn.FormatSql(sql);
             return conn.Execute(sql, model, trans, commandTimeout);
         }
@@ -305,10 +314,11 @@ namespace CDynamic.Dapper
         /// <param name="trans"></param>
         /// <param name="commandTimeout"></param>
         /// <returns></returns>
-        public static int Insert<T>(this IDbConnection conn, IEnumerable<T> models, string[] excepts = null, IDbTransaction trans = null, int? commandTimeout = null)
+        public static int Insert<T>(this IDbConnection conn, IEnumerable<T> models, string[] excepts = null,string tableName= null, IDbTransaction trans = null, int? commandTimeout = null)
         {
             var type = typeof(T);
-            var sql = type.InsertSql(excepts);
+            var sql = type.InsertSql(excepts,tableName);
+            _logger.Debug(sql);
             sql = conn.FormatSql(sql);
             return conn.Execute(sql, models.ToArray(), trans, commandTimeout);
         }
@@ -346,6 +356,7 @@ namespace CDynamic.Dapper
             IDbTransaction trans = null, int? commandTimeout = null)
         {
             var sql = UpdateSql<T>(updateProps);
+            sql=conn.FormatSql(sql);
             return conn.Execute(sql, entityToUpdate, trans, commandTimeout);
         }
         #endregion

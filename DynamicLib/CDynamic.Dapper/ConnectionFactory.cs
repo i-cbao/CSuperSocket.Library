@@ -118,7 +118,6 @@ namespace CDynamic.Dapper
                     _cacheCount++;
                     return connDict[cacheKey].GetConnection();
                 }
-
                 connDict.Add(cacheKey, new ConnectionStruct(Create(dbConfig)));
 
                 if (!_clearTimerRun)
