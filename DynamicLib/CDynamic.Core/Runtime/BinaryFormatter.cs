@@ -9,10 +9,12 @@ namespace Dynamic.Core.Runtime
     public interface ISerialize
     {
         void Serialize(Stream ms, object value);
-        object Deserialize(Stream st);
+        T Deserialize<T>(Stream st);
     }
 
-
+    /// <summary>
+    /// 目前内部用的bson
+    /// </summary>
     public class BinaryFormatter:ISerialize
     {
         public BinaryFormatter()
@@ -20,11 +22,15 @@ namespace Dynamic.Core.Runtime
 
         }
 
-        public object Deserialize(Stream st)
+        public T Deserialize<T>(Stream st)
         {
-            throw new NotImplementedException();
+            st.Position = 0;
+            using (BsonReader reader = new BsonReader(st))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                return  serializer.Deserialize<T>(reader);
+            }
         }
-
         public void Serialize(Stream ms, object value)
         {
 

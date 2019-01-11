@@ -9,7 +9,7 @@ namespace Dynamic.Core.Runtime
         {
 
         }
-        public object Deserialize(Stream st)
+        public T Deserialize<T>(Stream st)
         {
             throw new NotImplementedException();
         }

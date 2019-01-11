@@ -12,6 +12,10 @@ namespace Dynamic.Core.Runtime
     /// </summary>
     public static class ReflectionHelper
     {
+        public static Assembly LoadAssembly(String filePath)
+        {
+           return Assembly.LoadFrom(filePath);
+        }
         /// <summary>
         /// 从指定程序集中获取类型
         /// </summary>

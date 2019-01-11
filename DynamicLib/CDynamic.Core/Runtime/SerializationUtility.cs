@@ -112,13 +112,13 @@ namespace Dynamic.Core.Runtime
         /// <returns>反序列化后的对象</returns>
         public static TValue ToObject<TValue>(string xmlString)
         {
-            return (TValue)ToObject(xmlString, typeof(TValue));
+            return ToObject<TValue>(xmlString, typeof(TValue));
         }
 
-        public static Object ToObject(string xmlString, Type objectType)
+        public static T ToObject<T>(string xmlString, Type objectType)
         {
             XmlSerializer serializer = new XmlSerializer(objectType);
-            Object objectValue = null;
+            T objectValue = default(T);
             using (MemoryStream ms = new MemoryStream())
             {
                 StreamWriter sw = new StreamWriter(ms);
@@ -127,9 +127,8 @@ namespace Dynamic.Core.Runtime
 
                 ms.Position = 0;
 
-                objectValue = serializer.Deserialize(ms);
+                objectValue = serializer.Deserialize<T>(ms);
             }
-
             return objectValue;
         }
 
@@ -141,36 +140,49 @@ namespace Dynamic.Core.Runtime
         /// <returns>反序列化后的对象</returns>
         public static TValue ToObject<TValue>(Stream xmlStream)
         {
-            return (TValue)ToObject(xmlStream, typeof(TValue));
+            return ToObject<TValue>(xmlStream, typeof(TValue));
         }
 
-        public static Object ToObject(Stream xmlStream, Type objectType)
+        public static T ToObject<T>(Stream xmlStream, Type objectType)
         {
             XmlSerializer serializer = new XmlSerializer(objectType);
-            return serializer.Deserialize(xmlStream);
+            return serializer.Deserialize<T>(xmlStream);
         }
 
-        public static object BytesToObject(byte[] serializedObject)
+        public static T BytesToObject<T>(byte[] serializedObject)
         {
             if (serializedObject == null)
             {
-                return null;
+                return default(T);
             }
-
             using (MemoryStream dataInMemory = new MemoryStream(serializedObject))
             {
-                return new BinaryFormatter().Deserialize(dataInMemory);
+                return new BinaryFormatter().Deserialize<T>(dataInMemory);
             }
         }
-
-        public static object BytesToObject(Stream stream)
+        public static T JsonToObject<T>(string objectStr)
+        {
+            if (!string.IsNullOrEmpty(objectStr))
+            {
+              return  Newtonsoft.Json.JsonConvert.DeserializeObject<T>(objectStr);
+            }
+            return default(T);
+        }
+        public static string ObjectToJson(object jsonObj)
+        {
+            if (jsonObj!=null)
+            {
+                return Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj);
+            }
+            return null;
+        }
+        public static T BytesToObject<T>(Stream stream)
         {
             if (stream == null)
-                return null;
+                return default(T);
 
-            return new BinaryFormatter().Deserialize(stream);
+            return new BinaryFormatter().Deserialize<T>(stream);
         }
-
         private static string getTypeNamespace(Type type)
         {
             string typeName = type.FullName.Replace(".", "/");
