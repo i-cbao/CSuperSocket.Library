@@ -63,3 +63,17 @@ D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\o
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.AssemblyInfo.cs
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.dll
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\bin\Release\netstandard2.0\CSuperSocket.SocketEngine.deps.json
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\bin\Release\netstandard2.0\CSuperSocket.SocketEngine.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\bin\Release\netstandard2.0\CSuperSocket.SocketEngine.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\bin\Release\netstandard2.0\CSuperSocket.Common.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\bin\Release\netstandard2.0\CSuperSocket.SocketBase.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\bin\Release\netstandard2.0\CSuperSocket.Common.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\bin\Release\netstandard2.0\CSuperSocket.SocketBase.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.csprojAssemblyReference.cache
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.csproj.CoreCompileInputs.cache
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.AssemblyInfoInputs.cache
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.AssemblyInfo.cs
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.csproj.CopyComplete
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketEngine\obj\Release\netstandard2.0\CSuperSocket.SocketEngine.pdb

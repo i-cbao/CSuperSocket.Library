@@ -17,7 +17,7 @@ namespace TcpServerDemo
         static void Main(string[] args)
         {
             Startup.Init();
-           
+            
             InitSocket();
           //  InitServer();
             Console.WriteLine("初始化成功!");

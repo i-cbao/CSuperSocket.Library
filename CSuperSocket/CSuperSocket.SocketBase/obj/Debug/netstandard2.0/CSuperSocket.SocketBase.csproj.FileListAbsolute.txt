@@ -42,3 +42,15 @@ D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Debug\netstandard2.0\CSuperSocket.Common.pdb
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Debug\netstandard2.0\CSuperSocket.SocketBase.dll
 D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Debug\netstandard2.0\CSuperSocket.SocketBase.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Debug\netstandard2.0\CSuperSocket.SocketBase.deps.json
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Debug\netstandard2.0\CSuperSocket.SocketBase.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Debug\netstandard2.0\CSuperSocket.SocketBase.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Debug\netstandard2.0\CSuperSocket.Common.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\bin\Debug\netstandard2.0\CSuperSocket.Common.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Debug\netstandard2.0\CSuperSocket.SocketBase.csprojAssemblyReference.cache
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Debug\netstandard2.0\CSuperSocket.SocketBase.csproj.CoreCompileInputs.cache
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Debug\netstandard2.0\CSuperSocket.SocketBase.AssemblyInfoInputs.cache
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Debug\netstandard2.0\CSuperSocket.SocketBase.AssemblyInfo.cs
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Debug\netstandard2.0\CSuperSocket.SocketBase.csproj.CopyComplete
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Debug\netstandard2.0\CSuperSocket.SocketBase.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.SocketBase\obj\Debug\netstandard2.0\CSuperSocket.SocketBase.pdb

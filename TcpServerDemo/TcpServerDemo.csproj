@@ -27,10 +27,12 @@
     <ProjectReference Include="..\CSuperSocket\CSuperSocket.Facility\CSuperSocket.Facility.csproj" />
     <ProjectReference Include="..\CSuperSocket\CSuperSocket.ProtoBase\CSuperSocket.ProtoBase.csproj" />
     <ProjectReference Include="..\CSuperSocket\CSuperSocket.SocketBase\CSuperSocket.SocketBase.csproj" />
-    <ProjectReference Include="..\CSuperSocket\CSuperSocket.SocketEngine\CSuperSocket.SocketEngine.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="License">
+      <HintPath>..\bin\CSuperSocket\CSuperSocket.SocketEngine_Secure\CSuperSocket.SocketEngine.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Configuration">
       <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.configuration\2.0.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
     </Reference>

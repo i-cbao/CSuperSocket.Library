@@ -55,6 +55,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic.Windows.SySServices
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SystemTools", "SystemTools", "{76DC6362-1328-4D2B-B6B4-6A706E29A123}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{054F3069-2377-43BA-A8DA-D8DAA928DF41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSuperSocket.SocketCK", "CSuperSocket\CSuperSocket.SocketCK\CSuperSocket.SocketCK.csproj", "{19B24164-BED8-41CC-98C8-B5A875C18CDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +121,10 @@ Global
 		{6D221376-6364-4CB7-B58F-E4C690D2EF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D221376-6364-4CB7-B58F-E4C690D2EF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D221376-6364-4CB7-B58F-E4C690D2EF2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B24164-BED8-41CC-98C8-B5A875C18CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B24164-BED8-41CC-98C8-B5A875C18CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B24164-BED8-41CC-98C8-B5A875C18CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B24164-BED8-41CC-98C8-B5A875C18CDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,6 +148,7 @@ Global
 		{1971E05F-4D6B-4F9A-A1DB-8AE3102B122B} = {4EA75670-2928-42EC-B9B9-2C82B45B62E5}
 		{30D51B74-C0CC-4812-BB7D-B62739DA5D26} = {4EA75670-2928-42EC-B9B9-2C82B45B62E5}
 		{6D221376-6364-4CB7-B58F-E4C690D2EF2B} = {76DC6362-1328-4D2B-B6B4-6A706E29A123}
+		{19B24164-BED8-41CC-98C8-B5A875C18CDF} = {4EA75670-2928-42EC-B9B9-2C82B45B62E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8684CB3-1BCD-49D5-9B62-88464D9E1F61}
