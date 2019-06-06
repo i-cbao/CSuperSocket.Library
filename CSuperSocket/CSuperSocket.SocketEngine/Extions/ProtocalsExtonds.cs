@@ -34,6 +34,7 @@ namespace CSuperSocket.SocketEngine.Extions
                 serverCfg.DisableSessionSnapshot = simpleSocketConfig.DisableSessionSnapshot;
                 serverCfg.Name = simpleSocketConfig.Name;
                 serverCfg.PlatformType = simpleSocketConfig.PlatformType;
+                
 
 
                 ssCfg = new SocketServiceConfig(serverCfg);

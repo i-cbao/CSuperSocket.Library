@@ -1,6 +1,5 @@
 ﻿using CSuperSocket.SocketBase.Config;
 using CSuperSocket.SocketEngine;
-using CSuperSocket.SocketEngine.Extions;
 using Dynamic.Core.Service;
 using System;
 using System.Configuration;
@@ -63,6 +62,7 @@ namespace TcpServerDemo
 
             Stopwatch startWatch = new Stopwatch();
             startWatch.Start();
+            simpleCfg.Mode = CSuperSocket.SocketBase.SocketMode.Udp;
             var bootstrap = BootstrapFactory.CreateBootstrapFromServerCfg(simpleCfg);
             
             startWatch.Stop();

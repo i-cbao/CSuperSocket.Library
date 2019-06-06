@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "CSuperSocket.SocketEngine/2.1.2.1": {
+      "CSuperSocket.SocketEngine/2.1.2.2": {
         "dependencies": {
           "CSuperSocket.Common": "2.1.2.1",
           "CSuperSocket.SocketBase": "2.1.2.1",
@@ -668,7 +668,7 @@
     }
   },
   "libraries": {
-    "CSuperSocket.SocketEngine/2.1.2.1": {
+    "CSuperSocket.SocketEngine/2.1.2.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

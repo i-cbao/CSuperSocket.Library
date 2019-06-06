@@ -16,6 +16,8 @@ namespace CSuperSocket.SocketEngine
 
         private SocketAsyncEventArgs m_AcceptSAE;
 
+        public override SocketMode CurrentSocketModel =>SocketMode.Tcp;
+
         public TcpAsyncSocketListener(ListenerInfo info)
             : base(info)
         {

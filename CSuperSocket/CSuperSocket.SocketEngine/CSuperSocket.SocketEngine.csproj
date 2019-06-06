@@ -3,18 +3,18 @@
     <PackageId>CSuperSocket.SocketEngine</PackageId>
     <PackageTags>socket;CSuperSocket</PackageTags>
     <Title>SuperSocket.SocketEngine</Title>
-    <Description>CSuperSocket.SocketEngine</Description>
+    <Description>CSuperSocket.SocketEngine ADD support udp</Description>
     <Authors>Kerry Jiang;Sarco;DynamicBlue</Authors>
     <!--<TargetFrameworks>netstandard2.0;net40;net45;net451;net452</TargetFrameworks>-->
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>2.1.2.1</Version>
+    <Version>2.1.2.2</Version>
     <Product>CSuperSocket.SocketEngine</Product>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>CSuperSocket.SocketEngine</RootNamespace>
     <AssemblyName>CSuperSocket.SocketEngine</AssemblyName>
     <Company>Kerry Jiang;Sarco;DynamicBlue</Company>
-    <AssemblyVersion>2.1.2.1</AssemblyVersion>
-    <FileVersion>2.1.2.1</FileVersion>
+    <AssemblyVersion>2.1.2.2</AssemblyVersion>
+    <FileVersion>2.1.2.2</FileVersion>
     <PackageReleaseNotes>IServerConfig增加PlatformType（平台配置），代码层面控制平台代码逻辑
  if (config.PlatformType!=PlatformType.Linux)
                 {

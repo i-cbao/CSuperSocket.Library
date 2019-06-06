@@ -9,8 +9,8 @@ namespace TcpServerDemo
 {
     public class DefaultBeginEndMarkReceiveFilter : BeginEndMarkReceiveFilter<RequestInfo>
     {
-        private readonly static byte[] BeginMark = new byte[] { (byte)'!' };
-        private readonly static byte[] EndMark = new byte[] { (byte)'$' };
+        private readonly static byte[] BeginMark = new byte[] { (byte)'a' };
+        private readonly static byte[] EndMark = new byte[] { (byte)'a' };
         public DefaultBeginEndMarkReceiveFilter()
             : base(BeginMark, EndMark)
         {

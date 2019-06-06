@@ -12,7 +12,7 @@ namespace CSuperSocket.SocketEngine
         private Socket m_ListenSocket;
 
         private SocketAsyncEventArgs m_ReceiveSAE;
-
+        public override SocketMode CurrentSocketModel => SocketMode.Udp;
         public UdpSocketListener(ListenerInfo info)
             : base(info)
         {

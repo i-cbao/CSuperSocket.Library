@@ -10,6 +10,7 @@ namespace CSuperSocket.SocketEngine
     {
         public ListenerInfo Info { get; private set; }
 
+        public abstract SocketMode CurrentSocketModel { get; }
         public IPEndPoint EndPoint
         {
             get { return Info.EndPoint; }
@@ -59,7 +60,21 @@ namespace CSuperSocket.SocketEngine
             var handler = NewClientAccepted;
 
             if (handler != null)
-                handler.BeginInvoke(this, socket, state, null, null);
+            {
+                switch (this.CurrentSocketModel)
+                {
+                    case SocketMode.Tcp: {
+                            handler.BeginInvoke(this, socket, state, null, null);
+                        };break;
+                    case SocketMode.Udp:
+                        {
+                            handler.Invoke(this, socket, state);
+                        }; break;
+                }
+                
+                
+            }
+            
         }
 
         /// <summary>
