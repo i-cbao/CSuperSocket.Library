@@ -123,6 +123,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "SocketSecretPool/1.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SocketSecretPool.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SocketSecretPool.dll": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.4.0": {
         "type": "package",
         "compile": {
@@ -383,6 +392,17 @@
         "netstandard.library.nuspec"
       ]
     },
+    "SocketSecretPool/1.0.0.3": {
+      "sha512": "+plIVPkkgGNPPpIl1EI7w1TVYioWHDWjUOGksOA3PkjrMlaLfFX7iR/EfiUMrwuXQaw7/vGGfWRjiFkyt/q2lw==",
+      "type": "package",
+      "path": "socketsecretpool/1.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netstandard2.0/SocketSecretPool.dll",
+        "socketsecretpool.1.0.0.3.nupkg.sha512",
+        "socketsecretpool.nuspec"
+      ]
+    },
     "System.Runtime.CompilerServices.Unsafe/4.4.0": {
       "sha512": "0D85ti9IcUxWql213d4WE+f2JjNzRzHmEaG34qiA3hD7G8O4i0Mgr+Rutkn4pmrbrW+ABY4vzpECgHmdw+vTjQ==",
       "type": "package",
@@ -414,7 +434,8 @@
       "Microsoft.Extensions.DependencyInjection >= 2.0.0",
       "Microsoft.Extensions.Options >= 2.0.0",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 2.0.0",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "SocketSecretPool >= 1.0.0.3"
     ]
   },
   "packageFolders": {
@@ -485,6 +506,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "SocketSecretPool": {
+            "target": "Package",
+            "version": "[1.0.0.3, )"
           }
         },
         "imports": [

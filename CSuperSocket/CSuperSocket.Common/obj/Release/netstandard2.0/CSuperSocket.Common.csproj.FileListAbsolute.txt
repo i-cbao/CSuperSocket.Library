@@ -45,7 +45,6 @@ D:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Rel
 E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\bin\Release\netstandard2.0\CSuperSocket.Common.deps.json
 E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\bin\Release\netstandard2.0\CSuperSocket.Common.dll
 E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\bin\Release\netstandard2.0\CSuperSocket.Common.pdb
-E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.csprojAssemblyReference.cache
 E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.csproj.CoreCompileInputs.cache
 E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.AssemblyInfoInputs.cache
 E:\WorkSpace\opensource\ICB\ICB.Library\CSuperSocket\CSuperSocket.Common\obj\Release\netstandard2.0\CSuperSocket.Common.AssemblyInfo.cs

@@ -41,6 +41,9 @@
       <Version>2.0.0</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SocketSecretPool" Version="1.0.0.3" />
+  </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="copy $(TargetPath)  $(SolutionDir)bin\CSuperSocket\$(TargetName).dll&#xD;&#xA;" />
   </Target>  

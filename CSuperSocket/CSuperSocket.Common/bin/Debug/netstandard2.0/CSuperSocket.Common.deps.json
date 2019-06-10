@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "713c91dc6ac247fd94b17beef8f105b1c0fda0cb"
+    "signature": "402dd66a057894ba0f35926acd93958dc2d2d6f2"
   },
   "compilationOptions": {},
   "targets": {
@@ -14,7 +14,8 @@
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0",
-          "NETStandard.Library": "2.0.3"
+          "NETStandard.Library": "2.0.3",
+          "SocketSecretPool": "1.0.0.3"
         },
         "runtime": {
           "CSuperSocket.Common.dll": {}
@@ -115,6 +116,14 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
+      "SocketSecretPool/1.0.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/SocketSecretPool.dll": {
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
@@ -200,6 +209,13 @@
       "sha512": "sha512-548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "SocketSecretPool/1.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+plIVPkkgGNPPpIl1EI7w1TVYioWHDWjUOGksOA3PkjrMlaLfFX7iR/EfiUMrwuXQaw7/vGGfWRjiFkyt/q2lw==",
+      "path": "socketsecretpool/1.0.0.3",
+      "hashPath": "socketsecretpool.1.0.0.3.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/4.4.0": {
       "type": "package",

@@ -9,10 +9,11 @@ namespace TcpServerDemo
    public  class Service : AppServer<Session, RequestInfo>
     {
         public Service()
-          : base(new DefaultReceiveFilterFactory<DefaultBeginEndMarkReceiveFilter, RequestInfo>())
+          : base(new DefaultReceiveFilterFactory<DefaultBeginEndMarkReceiveFilter2, RequestInfo>())
         {
-        
+     
         }
+       
         protected override void OnSessionClosed(Session session, CloseReason reason)
         {
             Console.WriteLine("session连接断开" + session.RemoteEndPoint);
@@ -26,8 +27,8 @@ namespace TcpServerDemo
         }
         protected override void ExecuteCommand(Session session, RequestInfo requestInfo)
         {
-          var strValue=System.Text.Encoding.UTF8.GetString(requestInfo.Body);
-            Console.WriteLine(strValue);
+          //var strValue=System.Text.Encoding.UTF8.GetString(requestInfo.Body);
+            Console.WriteLine(requestInfo.Body.ToHex());
            
         }
     }

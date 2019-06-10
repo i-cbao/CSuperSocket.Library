@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "34705e4fec4b4a5bdc75774f8f99c9b8f5f15a3d"
+    "signature": "1edc5f7ff20da624a34bcad290a42e658bec5c5e"
   },
   "compilationOptions": {},
   "targets": {
@@ -47,7 +47,7 @@
           }
         }
       },
-      "Dynamic.Core/2.1.4.5": {
+      "Dynamic.Core/2.1.6.6": {
         "dependencies": {
           "CacheManager.Microsoft.Extensions.Caching.Memory": "1.1.2",
           "Microsoft.CSharp": "4.4.1",
@@ -62,8 +62,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Dynamic.Core.dll": {
-            "assemblyVersion": "2.1.4.5",
-            "fileVersion": "2.1.4.5"
+            "assemblyVersion": "2.1.6.6",
+            "fileVersion": "2.1.6.6"
           }
         }
       },
@@ -659,7 +659,7 @@
       "CSuperSocket.SocketBase/2.1.2.1": {
         "dependencies": {
           "CSuperSocket.Common": "2.1.2.1",
-          "Dynamic.Core": "2.1.4.5"
+          "Dynamic.Core": "2.1.6.6"
         },
         "runtime": {
           "CSuperSocket.SocketBase.dll": {}
@@ -687,12 +687,12 @@
       "path": "cachemanager.microsoft.extensions.caching.memory/1.1.2",
       "hashPath": "cachemanager.microsoft.extensions.caching.memory.1.1.2.nupkg.sha512"
     },
-    "Dynamic.Core/2.1.4.5": {
+    "Dynamic.Core/2.1.6.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-00fAkPZnOiRWjW7KpvPKm+wBeqIyIsEhLqnkFVTkt8V6l/+aSl8q0uEL9l+ml3ukiHbQY68C0EpuVjcknYRRjw==",
-      "path": "dynamic.core/2.1.4.5",
-      "hashPath": "dynamic.core.2.1.4.5.nupkg.sha512"
+      "sha512": "sha512-6xYgS7my95EAQw7VQX8RKphjtQke909eKo5RLMSCB385uOBxPrLaTdSJ3WjpSKVoEBSsqOduG2dspEwbGt5OUg==",
+      "path": "dynamic.core/2.1.6.6",
+      "hashPath": "dynamic.core.2.1.6.6.nupkg.sha512"
     },
     "Microsoft.CSharp/4.4.1": {
       "type": "package",

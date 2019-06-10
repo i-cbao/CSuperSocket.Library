@@ -16,18 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dynamic.Core" Version="2.1.4.5" />
+    <PackageReference Include="Dynamic.Core" Version="2.1.6.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\CSuperSocket\CSuperSocket.Common\CSuperSocket.Common.csproj" />
-    <ProjectReference Include="..\CSuperSocket\CSuperSocket.Dlr\CSuperSocket.Dlr.csproj" />
-    <ProjectReference Include="..\CSuperSocket\CSuperSocket.Facility\CSuperSocket.Facility.csproj" />
-    <ProjectReference Include="..\CSuperSocket\CSuperSocket.ProtoBase\CSuperSocket.ProtoBase.csproj" />
-    <ProjectReference Include="..\CSuperSocket\CSuperSocket.SocketBase\CSuperSocket.SocketBase.csproj" />
-    <ProjectReference Include="..\CSuperSocket\CSuperSocket.SocketEngine\CSuperSocket.SocketEngine.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +30,15 @@
 
   <ItemGroup>
     <Folder Include="Config\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSuperSocket\CSuperSocket.Common\CSuperSocket.Common.csproj" />
+    <ProjectReference Include="..\CSuperSocket\CSuperSocket.Dlr\CSuperSocket.Dlr.csproj" />
+    <ProjectReference Include="..\CSuperSocket\CSuperSocket.Facility\CSuperSocket.Facility.csproj" />
+    <ProjectReference Include="..\CSuperSocket\CSuperSocket.ProtoBase\CSuperSocket.ProtoBase.csproj" />
+    <ProjectReference Include="..\CSuperSocket\CSuperSocket.SocketBase\CSuperSocket.SocketBase.csproj" />
+    <ProjectReference Include="..\CSuperSocket\CSuperSocket.SocketEngine\CSuperSocket.SocketEngine.csproj" />
   </ItemGroup>
 
 </Project>

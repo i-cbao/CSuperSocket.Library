@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "7b247b2d11fc1d04736ebbe5e398747880669bf0"
+    "signature": "96657533cd431de09192cd6b949c39ba0155ac59"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,7 +10,7 @@
       "CSuperSocket.SocketBase/2.1.2.1": {
         "dependencies": {
           "CSuperSocket.Common": "2.1.2.1",
-          "Dynamic.Core": "2.1.4.5",
+          "Dynamic.Core": "2.1.6.6",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -41,7 +41,7 @@
           }
         }
       },
-      "Dynamic.Core/2.1.4.5": {
+      "Dynamic.Core/2.1.6.6": {
         "dependencies": {
           "CacheManager.Microsoft.Extensions.Caching.Memory": "1.1.2",
           "Microsoft.CSharp": "4.4.1",
@@ -56,8 +56,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Dynamic.Core.dll": {
-            "assemblyVersion": "2.1.4.5",
-            "fileVersion": "2.1.4.5"
+            "assemblyVersion": "2.1.6.6",
+            "fileVersion": "2.1.6.6"
           }
         }
       },
@@ -251,6 +251,14 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "SocketSecretPool/1.0.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/SocketSecretPool.dll": {
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
+          }
         }
       },
       "System.AppContext/4.1.0": {
@@ -580,7 +588,8 @@
           "Microsoft.Extensions.Configuration.Binder": "2.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0"
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0",
+          "SocketSecretPool": "1.0.0.3"
         },
         "runtime": {
           "CSuperSocket.Common.dll": {}
@@ -608,12 +617,12 @@
       "path": "cachemanager.microsoft.extensions.caching.memory/1.1.2",
       "hashPath": "cachemanager.microsoft.extensions.caching.memory.1.1.2.nupkg.sha512"
     },
-    "Dynamic.Core/2.1.4.5": {
+    "Dynamic.Core/2.1.6.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-00fAkPZnOiRWjW7KpvPKm+wBeqIyIsEhLqnkFVTkt8V6l/+aSl8q0uEL9l+ml3ukiHbQY68C0EpuVjcknYRRjw==",
-      "path": "dynamic.core/2.1.4.5",
-      "hashPath": "dynamic.core.2.1.4.5.nupkg.sha512"
+      "sha512": "sha512-6xYgS7my95EAQw7VQX8RKphjtQke909eKo5RLMSCB385uOBxPrLaTdSJ3WjpSKVoEBSsqOduG2dspEwbGt5OUg==",
+      "path": "dynamic.core/2.1.6.6",
+      "hashPath": "dynamic.core.2.1.6.6.nupkg.sha512"
     },
     "Microsoft.CSharp/4.4.1": {
       "type": "package",
@@ -747,6 +756,13 @@
       "sha512": "sha512-QfS/nQI7k/BLgmLrw7qm7YBoULEvgWnPI+cYsbfCVFTW8Aj+i8JhccxcFMu1RWms0YZzF+UHguNBK4Qn89e2Sg==",
       "path": "runtime.native.system/4.0.0",
       "hashPath": "runtime.native.system.4.0.0.nupkg.sha512"
+    },
+    "SocketSecretPool/1.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+plIVPkkgGNPPpIl1EI7w1TVYioWHDWjUOGksOA3PkjrMlaLfFX7iR/EfiUMrwuXQaw7/vGGfWRjiFkyt/q2lw==",
+      "path": "socketsecretpool/1.0.0.3",
+      "hashPath": "socketsecretpool.1.0.0.3.nupkg.sha512"
     },
     "System.AppContext/4.1.0": {
       "type": "package",

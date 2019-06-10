@@ -28,7 +28,7 @@
           "lib/netstandard1.3/CacheManager.Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
-      "Dynamic.Core/2.1.4.5": {
+      "Dynamic.Core/2.1.6.6": {
         "type": "package",
         "dependencies": {
           "CacheManager.Microsoft.Extensions.Caching.Memory": "1.1.2",
@@ -348,6 +348,15 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "SocketSecretPool/1.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SocketSecretPool.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SocketSecretPool.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -775,7 +784,8 @@
           "Microsoft.Extensions.Configuration.Binder": "2.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0"
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0",
+          "SocketSecretPool": "1.0.0.3"
         },
         "compile": {
           "bin/placeholder/CSuperSocket.Common.dll": {}
@@ -789,7 +799,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "CSuperSocket.Common": "2.1.2.1",
-          "Dynamic.Core": "2.1.4.5"
+          "Dynamic.Core": "2.1.6.6"
         },
         "compile": {
           "bin/placeholder/CSuperSocket.SocketBase.dll": {}
@@ -833,14 +843,13 @@
         "lib/netstandard1.3/CacheManager.Microsoft.Extensions.Caching.Memory.xml"
       ]
     },
-    "Dynamic.Core/2.1.4.5": {
-      "sha512": "00fAkPZnOiRWjW7KpvPKm+wBeqIyIsEhLqnkFVTkt8V6l/+aSl8q0uEL9l+ml3ukiHbQY68C0EpuVjcknYRRjw==",
+    "Dynamic.Core/2.1.6.6": {
+      "sha512": "6xYgS7my95EAQw7VQX8RKphjtQke909eKo5RLMSCB385uOBxPrLaTdSJ3WjpSKVoEBSsqOduG2dspEwbGt5OUg==",
       "type": "package",
-      "path": "dynamic.core/2.1.4.5",
+      "path": "dynamic.core/2.1.6.6",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
-        "dynamic.core.2.1.4.5.nupkg.sha512",
+        "dynamic.core.2.1.6.6.nupkg.sha512",
         "dynamic.core.nuspec",
         "lib/netstandard2.0/Dynamic.Core.dll"
       ]
@@ -1354,6 +1363,17 @@
         "lib/netstandard1.0/_._",
         "runtime.native.system.4.0.0.nupkg.sha512",
         "runtime.native.system.nuspec"
+      ]
+    },
+    "SocketSecretPool/1.0.0.3": {
+      "sha512": "+plIVPkkgGNPPpIl1EI7w1TVYioWHDWjUOGksOA3PkjrMlaLfFX7iR/EfiUMrwuXQaw7/vGGfWRjiFkyt/q2lw==",
+      "type": "package",
+      "path": "socketsecretpool/1.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netstandard2.0/SocketSecretPool.dll",
+        "socketsecretpool.1.0.0.3.nupkg.sha512",
+        "socketsecretpool.nuspec"
       ]
     },
     "System.AppContext/4.1.0": {

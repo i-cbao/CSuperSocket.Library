@@ -13,12 +13,12 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kerry Jiang;Sarco;DynamicBlue")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("CSuperSocket.SocketEngine")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2.1.2.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.1.2.1")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("CSuperSocket.SocketEngine ADD support udp")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.1.2.2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.1.2.2")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSuperSocket.SocketEngine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSuperSocket.SocketEngine")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2.1.2.1")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.1.2.2")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 

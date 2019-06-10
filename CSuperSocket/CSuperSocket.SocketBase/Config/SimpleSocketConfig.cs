@@ -19,8 +19,8 @@ namespace CSuperSocket.SocketBase.Config
             this.IdleSessionTimeOut = 300;
             this.ClearIdleSessionInterval = 60;
             this.ClearIdleSession = true;
-            this.ReceiveBufferSize = 128;
-            this.SendBufferSize = 128;
+            this.ReceiveBufferSize = 1500;
+            this.SendBufferSize = 1500;
             this.DisableSessionSnapshot = true;
             this.Name = "IcbTerminal";
             this.MaxCompletionPortThreads = 10000;

@@ -38,7 +38,7 @@ namespace TcpServerDemo
     }
     public class ReceiveFilter : IReceiveFilter<RequestInfo>
     {
-        DefaultBeginEndMarkReceiveFilter defaultFilter = new DefaultBeginEndMarkReceiveFilter();
+        DefaultBeginEndMarkReceiveFilter2 defaultFilter = new DefaultBeginEndMarkReceiveFilter2();
 
         public int LeftBufferSize
         {

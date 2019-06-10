@@ -41,10 +41,12 @@ namespace TcpServerDemo
             }
             appServer.SessionClosed += Service_SessionClosed;
             appServer.NewSessionConnected += Service_NewSessionConnected;
-          
-          
             
+
+
+
         }
+     
 
         private static void Service_NewSessionConnected(Session session)
         {

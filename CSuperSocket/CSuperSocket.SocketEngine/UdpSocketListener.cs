@@ -1,6 +1,7 @@
 ﻿using CSuperSocket.Common;
 using CSuperSocket.SocketBase;
 using CSuperSocket.SocketBase.Config;
+using Dynamic.Core.Extensions;
 using System;
 using System.Net;
 using System.Net.Sockets;
