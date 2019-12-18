@@ -43,3 +43,5 @@ D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore\obj\Debug\
 D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.AssemblyInfo.cs
 D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.dll
 D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.pdb

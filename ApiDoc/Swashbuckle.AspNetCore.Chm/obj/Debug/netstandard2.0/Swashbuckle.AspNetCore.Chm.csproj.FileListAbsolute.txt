@@ -19,3 +19,9 @@ D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\De
 D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Chm.dll
 D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Chm.xml
 D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Chm.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Chm.csprojAssemblyReference.cache
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Chm.AssemblyInfoInputs.cache
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Chm.AssemblyInfo.cs
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Chm.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Chm.xml
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.Chm\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.Chm.pdb

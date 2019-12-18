@@ -26,3 +26,6 @@ D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj
 D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.dll
 D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.xml
 D:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.pdb
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.dll
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.xml
+E:\WorkSpace\opensource\ICB\ICB.Library\ApiDoc\Swashbuckle.AspNetCore.ChmGen\obj\Debug\netstandard2.0\Swashbuckle.AspNetCore.ChmGen.pdb

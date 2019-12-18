@@ -21,7 +21,7 @@ namespace Swashbuckle.AspNetCore.Chm
         public SwaggerMiddleware(
             RequestDelegate next,
             ISwaggerProvider swaggerProvider,
-            IOptions<MvcJsonOptions> mvcJsonOptions,
+            IOptions<MvcNewtonsoftJsonOptions> mvcJsonOptions,
             SwaggerOptions options)
         {
             _next = next;

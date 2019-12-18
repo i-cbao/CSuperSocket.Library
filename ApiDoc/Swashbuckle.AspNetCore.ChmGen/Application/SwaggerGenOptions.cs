@@ -242,7 +242,7 @@ namespace Swashbuckle.AspNetCore.ChmGen
             }
 
             var schemaRegistryFactory = new SchemaRegistryFactory(
-                serviceProvider.GetRequiredService<IOptions<MvcJsonOptions>>().Value.SerializerSettings,
+                serviceProvider.GetRequiredService<IOptions<MvcNewtonsoftJsonOptions>>().Value.SerializerSettings,
                 schemaRegistrySettings
             );
 

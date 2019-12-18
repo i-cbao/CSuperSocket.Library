@@ -6,7 +6,7 @@ namespace Swashbuckle.AspNetCore.Chm
 {
     public class SwaggerSerializerFactory
     {
-        internal static JsonSerializer Create(IOptions<MvcJsonOptions> applicationJsonOptions)
+        internal static JsonSerializer Create(IOptions<MvcNewtonsoftJsonOptions> applicationJsonOptions)
         {
             // TODO: Should this handle case where mvcJsonOptions.Value == null?
             return new JsonSerializer

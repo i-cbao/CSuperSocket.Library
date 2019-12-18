@@ -47,8 +47,7 @@ namespace CSuperSocket.SocketEngine
                     //Console.WriteLine("开始进入异常片段 该句在linux下不被支持 m_ListenSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);");
                     m_ListenSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.DontLinger, true);
                 }
-
-
+                
                 SocketAsyncEventArgs acceptEventArg = new SocketAsyncEventArgs();
                 m_AcceptSAE = acceptEventArg;
                 acceptEventArg.Completed += new EventHandler<SocketAsyncEventArgs>(acceptEventArg_Completed);
